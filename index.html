@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>공사중 | Under Construction</title>
+<meta name="description" content="현재 페이지를 준비하고 있습니다. 곧 찾아뵙겠습니다.">
+<meta name="theme-color" content="#0e1117" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
+<meta property="og:type" content="website">
+<meta property="og:title" content="공사중 | Under Construction">
+<meta property="og:description" content="현재 페이지를 준비하고 있습니다. 곧 찾아뵙겠습니다.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚧</text></svg>">
+
+<style>
+  :root {
+    --bg: #0e1117;
+    --bg-soft: #161b24;
+    --fg: #e8ecf3;
+    --fg-dim: #97a3b6;
+    --line: rgba(255, 255, 255, .10);
+    --accent: #ffb020;
+    --accent-2: #ff7a45;
+    --stripe-a: #ffb020;
+    --stripe-b: #1a1f29;
+    --shadow: 0 24px 60px -20px rgba(0, 0, 0, .7);
+  }
+
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f6f7f9;
+      --bg-soft: #ffffff;
+      --fg: #12171f;
+      --fg-dim: #5d6779;
+      --line: rgba(10, 15, 25, .10);
+      --accent: #e08a00;
+      --accent-2: #e2571f;
+      --stripe-a: #f4b528;
+      --stripe-b: #2b313c;
+      --shadow: 0 24px 60px -24px rgba(20, 30, 50, .25);
+    }
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body { height: 100%; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard",
+                 "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    display: flex;
+    flex-direction: column;
+    min-height: 100svh;
+    overflow-x: hidden;
+  }
+
+  /* 배경 글로우 */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: -30%;
+    z-index: -1;
+    background:
+      radial-gradient(42vmax 42vmax at 18% 12%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 62%),
+      radial-gradient(38vmax 38vmax at 84% 82%, color-mix(in srgb, var(--accent-2) 18%, transparent), transparent 62%);
+    filter: blur(20px);
+    animation: drift 22s ease-in-out infinite alternate;
+  }
+
+  @keyframes drift {
+    from { transform: translate3d(-2%, -1%, 0) scale(1); }
+    to   { transform: translate3d(3%, 2%, 0) scale(1.08); }
+  }
+
+  /* 위험 표시 줄무늬 */
+  .stripe {
+    height: 12px;
+    flex: none;
+    background: repeating-linear-gradient(
+      -45deg,
+      var(--stripe-a) 0 18px,
+      var(--stripe-b) 18px 36px
+    );
+    background-size: 50.91px 50.91px;
+    animation: slide 1.6s linear infinite;
+  }
+  .stripe--bottom { animation-direction: reverse; }
+
+  @keyframes slide {
+    to { background-position: 50.91px 0; }
+  }
+
+  main {
+    flex: 1;
+    display: grid;
+    place-items: center;
+    padding: clamp(20px, 6vw, 56px) clamp(16px, 5vw, 40px);
+  }
+
+  .card {
+    width: min(640px, 100%);
+    text-align: center;
+    padding: clamp(28px, 7vw, 56px) clamp(20px, 6vw, 48px);
+    border: 1px solid var(--line);
+    border-radius: 24px;
+    background: color-mix(in srgb, var(--bg-soft) 72%, transparent);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    box-shadow: var(--shadow);
+    animation: rise .7s cubic-bezier(.21, .82, .3, 1) both;
+  }
+
+  @keyframes rise {
+    from { opacity: 0; transform: translateY(18px); }
+  }
+
+  /* 콘 아이콘 */
+  .cone {
+    width: clamp(72px, 18vw, 104px);
+    height: auto;
+    display: block;
+    margin: 0 auto clamp(18px, 4vw, 26px);
+    animation: wobble 3.4s ease-in-out infinite;
+    transform-origin: 50% 92%;
+  }
+
+  @keyframes wobble {
+    0%, 100% { transform: rotate(-4deg); }
+    50%      { transform: rotate(4deg); }
+  }
+
+  .badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 14px;
+    margin-bottom: 18px;
+    font-size: clamp(11px, 2.6vw, 12px);
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--accent);
+    border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--accent) 12%, transparent);
+  }
+
+  .badge .dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    animation: pulse 1.5s ease-in-out infinite;
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50%      { opacity: .35; transform: scale(.75); }
+  }
+
+  h1 {
+    margin: 0;
+    font-size: clamp(44px, 15vw, 92px);
+    line-height: 1.05;
+    letter-spacing: -.02em;
+    font-weight: 800;
+    background: linear-gradient(135deg, var(--accent), var(--accent-2));
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .sub {
+    margin: 10px 0 0;
+    font-size: clamp(12px, 3.2vw, 14px);
+    font-weight: 600;
+    letter-spacing: .32em;
+    text-indent: .32em;
+    color: var(--fg-dim);
+  }
+
+  .desc {
+    margin: clamp(20px, 5vw, 28px) auto 0;
+    max-width: 34ch;
+    font-size: clamp(14px, 3.8vw, 16px);
+    line-height: 1.75;
+    color: var(--fg-dim);
+    word-break: keep-all;
+  }
+
+  /* 진행 바 */
+  .progress {
+    margin-top: clamp(26px, 6vw, 34px);
+  }
+
+  .track {
+    height: 8px;
+    border-radius: 999px;
+    overflow: hidden;
+    background: color-mix(in srgb, var(--fg) 10%, transparent);
+  }
+
+  .bar {
+    height: 100%;
+    width: 0;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    animation: fill 2.2s cubic-bezier(.25, .8, .3, 1) .35s forwards;
+  }
+
+  @keyframes fill {
+    to { width: 68%; }
+  }
+
+  .progress-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: clamp(11px, 3vw, 12px);
+    font-variant-numeric: tabular-nums;
+    color: var(--fg-dim);
+  }
+
+  footer {
+    flex: none;
+    padding: 20px 16px calc(20px + env(safe-area-inset-bottom));
+    text-align: center;
+    font-size: 12px;
+    color: var(--fg-dim);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+      animation-duration: .001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: .001ms !important;
+    }
+    .bar { width: 68%; }
+  }
+</style>
+</head>
+<body>
+
+<div class="stripe" aria-hidden="true"></div>
+
+<main>
+  <section class="card">
+    <svg class="cone" viewBox="0 0 120 120" role="img" aria-label="공사 표지 콘">
+      <ellipse cx="60" cy="104" rx="46" ry="9" fill="rgba(0,0,0,.18)"/>
+      <rect x="10" y="96" width="100" height="14" rx="7" fill="#e2571f"/>
+      <path d="M60 12 L92 96 H28 Z" fill="#ff7a45"/>
+      <path d="M60 12 L70 38 H50 Z" fill="#ff9466"/>
+      <path d="M46 50 H74 L78 64 H42 Z" fill="#fff5e6"/>
+      <path d="M38 72 H82 L86 86 H34 Z" fill="#fff5e6"/>
+    </svg>
+
+    <span class="badge"><span class="dot"></span>Under Construction</span>
+
+    <h1>공사중</h1>
+    <p class="sub">SITE IN PROGRESS</p>
+
+    <p class="desc">
+      더 나은 모습으로 찾아뵙기 위해 페이지를 준비하고 있습니다.<br>
+      조금만 기다려 주세요.
+    </p>
+
+    <div class="progress">
+      <div class="track" role="progressbar" aria-label="작업 진행률" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">
+        <div class="bar"></div>
+      </div>
+      <div class="progress-meta">
+        <span>작업 진행 중</span>
+        <span>68%</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  &copy; <span id="year">2026</span> ttony99
+</footer>
+
+<div class="stripe stripe--bottom" aria-hidden="true"></div>
+
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
