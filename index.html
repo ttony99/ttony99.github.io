@@ -1,295 +1,745 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ko">
 <head>
 <meta charset="utf-8">
+<title>조한용 · 한세정 결혼합니다</title>
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:title" content="조한용 · 한세정 결혼합니다">
+<meta property="og:description" content="2027년 2월 27일 토요일 오후 12시 30분 · 더베르G">
+<meta property="og:image" content="photos/og.jpg">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>공사중 | Under Construction</title>
-<meta name="description" content="현재 페이지를 준비하고 있습니다. 곧 찾아뵙겠습니다.">
-<meta name="theme-color" content="#0e1117" media="(prefers-color-scheme: dark)">
-<meta name="theme-color" content="#f6f7f9" media="(prefers-color-scheme: light)">
-<meta property="og:type" content="website">
-<meta property="og:title" content="공사중 | Under Construction">
-<meta property="og:description" content="현재 페이지를 준비하고 있습니다. 곧 찾아뵙겠습니다.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🚧</text></svg>">
-
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://api.fontshare.com/v2/css?f[]=bespoke-serif@400,500,401,501&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ms+Madi&family=Oswald:wght@300;400;500&family=Noto+Serif+KR:wght@400;600&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
-  :root {
-    --bg: #0e1117;
-    --bg-soft: #161b24;
-    --fg: #e8ecf3;
-    --fg-dim: #97a3b6;
-    --line: rgba(255, 255, 255, .10);
-    --accent: #ffb020;
-    --accent-2: #ff7a45;
-    --stripe-a: #ffb020;
-    --stripe-b: #1a1f29;
-    --shadow: 0 24px 60px -20px rgba(0, 0, 0, .7);
-  }
+:root{
+  --paper:#F6F1E6; --paper-deep:#ECE5D4; --card:#FBF8F1; --ink:#2B2622; --ink-soft:#6F675E;
+  --red:#C2463C; --red-deep:#9E352D; --line:#D9D1C0; --sepia:#3B322B;
+  --disp:"Bespoke Serif","Noto Serif KR",Georgia,serif;
+  --cond:"Oswald","Apple SD Gothic Neo",sans-serif;
+  --kr:"Noto Serif KR","Apple Myungjo",serif;
+  --sans:"Noto Sans KR","Apple SD Gothic Neo","Malgun Gothic",sans-serif;
+  /* 손글씨: Christmas Twinkle (fonts/ · Personal Use 라이선스 — 상업 배포 시 라이선스 확인) */
+  --hand:"Christmas Twinkle","Ms Madi",cursive;
+}
+@font-face{font-family:"Christmas Twinkle"; src:url("fonts/ChristmasTwinklePersonaluse-Regular.ttf") format("truetype"); font-display:swap}
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{background:#DED7C6; font-family:var(--kr); color:var(--ink); line-height:1.8}
+.sheet{max-width:430px; margin:0 auto; background:var(--paper); min-height:100vh; overflow:hidden; position:relative; box-shadow:0 0 70px rgba(43,38,34,.2)}
+/* paper grain (light) */
+.cover::before{
+  content:""; position:absolute; inset:0; pointer-events:none; z-index:0; opacity:.45;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 .2 0 0 0 0 .17 0 0 0 0 .13 0 0 0 .06 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+.cover{position:relative}
+.cover > *{position:relative; z-index:1}
+section{padding:72px 30px; text-align:center}
+.ko{font-family:var(--sans) !important; font-weight:500 !important; letter-spacing:.3em !important; text-indent:.3em !important}
+.slug{font-family:var(--cond); font-weight:400; font-size:11px; letter-spacing:.5em; text-indent:.5em; color:var(--red); text-transform:uppercase; margin-bottom:10px}
+h2{font-family:var(--kr); font-weight:600; font-size:19px; letter-spacing:.04em; margin-bottom:28px}
+h2::after{content:""; display:block; width:40px; height:2px; background:var(--ink); margin:16px auto 0}
 
-  @media (prefers-color-scheme: light) {
-    :root {
-      --bg: #f6f7f9;
-      --bg-soft: #ffffff;
-      --fg: #12171f;
-      --fg-dim: #5d6779;
-      --line: rgba(10, 15, 25, .10);
-      --accent: #e08a00;
-      --accent-2: #e2571f;
-      --stripe-a: #f4b528;
-      --stripe-b: #2b313c;
-      --shadow: 0 24px 60px -24px rgba(20, 30, 50, .25);
-    }
-  }
+/* ── cover ── */
+.cover{padding:60px 26px 64px; text-align:center}
+.cover .top{
+  display:flex; justify-content:space-between; align-items:center; font-family:var(--cond); font-weight:400;
+  font-size:10.5px; letter-spacing:.32em; color:var(--ink-soft); text-transform:uppercase; margin-bottom:38px;
+}
+.cover .top b{font-weight:400; color:var(--red); border:1px solid var(--red); padding:3px 9px 2px; border-radius:3px; letter-spacing:.24em}
 
-  * { box-sizing: border-box; }
+/* ticket */
+.ticket-wrap{perspective:900px}
+.ticket{
+  position:relative; display:grid; grid-template-columns:minmax(0,1fr) 66px; background:var(--card); color:var(--ink);
+  border-radius:10px; text-align:left; transform:rotate(-2.4deg);
+  box-shadow:0 26px 40px -24px rgba(43,38,34,.55), 0 1px 0 rgba(255,255,255,.7) inset;
+  -webkit-mask:
+    radial-gradient(circle at calc(100% - 66px) 0, transparent 9px, #000 9.6px),
+    radial-gradient(circle at calc(100% - 66px) 100%, transparent 9px, #000 9.6px);
+  -webkit-mask-composite:source-in; mask-composite:intersect;
+}
+.ticket::before{content:""; position:absolute; inset:0; border:1.5px solid var(--ink); border-radius:10px; pointer-events:none}
+.t-main{padding:20px 16px 18px 20px; border-right:1.5px dashed var(--ink); display:grid; gap:6px; min-width:0}
+.t-main .admit{
+  display:flex; justify-content:space-between; gap:8px; font-family:var(--cond); font-size:10px; letter-spacing:.22em; white-space:nowrap;
+  color:var(--red); text-transform:uppercase; border-bottom:1px solid var(--line); padding-bottom:10px; margin-bottom:6px;
+}
+.t-main .title{font-family:var(--disp); font-size:clamp(26px, 8vw, 34px); font-weight:400; line-height:1.08; letter-spacing:-.01em}
+.t-main .title span{white-space:nowrap}
+.t-main .title i{font-style:italic; font-weight:400; color:var(--red); font-size:.6em; display:inline-block; margin:0 6px}
+.t-main .krn{font-family:var(--kr); font-size:13px; letter-spacing:.28em; text-indent:.28em; color:var(--ink-soft); text-align:left; text-indent:0; margin-top:2px}
+.t-grid{display:flex; justify-content:space-between; gap:6px; margin-top:12px; border-top:1px solid var(--line); padding-top:12px}
+.t-grid div{display:grid; gap:1px}
+.t-grid small{font-family:var(--cond); font-size:9.5px; letter-spacing:.24em; color:var(--ink-soft); text-transform:uppercase}
+.t-grid b{font-family:var(--cond); font-weight:500; font-size:clamp(13px, 4vw, 16px); letter-spacing:.04em; line-height:1.2; white-space:nowrap}
+.t-grid b em{font-style:normal; font-size:11px; color:var(--ink-soft); font-weight:400}
+.t-main .venue{font-family:var(--cond); font-size:11px; letter-spacing:.06em; color:var(--ink-soft); margin-top:6px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.t-stub{
+  padding:18px 0; display:flex; flex-direction:column; align-items:center; justify-content:space-between;
+  background:repeating-linear-gradient(0deg, transparent 0 6px, rgba(43,38,34,.035) 6px 7px);
+}
+.t-stub .vert{writing-mode:vertical-rl; transform:rotate(180deg); font-family:var(--cond); font-size:10.5px; letter-spacing:.36em; color:var(--ink-soft); text-transform:uppercase}
+.t-stub .no{font-family:var(--cond); font-size:11px; letter-spacing:.14em; color:var(--red); font-weight:500}
+.t-stub .heart{font-family:var(--disp); font-size:18px; color:var(--red)}
 
-  html, body { height: 100%; }
+/* screen / main still */
+.screen{
+  margin:46px auto 0; width:100%; aspect-ratio:2/3; border-radius:6px; overflow:hidden; position:relative; container-type:inline-size;
+  background:linear-gradient(165deg,#DCD3C2 0%,#BFB39D 55%,#A2957E 100%);
+  display:grid; place-items:center; box-shadow:0 20px 40px -30px rgba(43,38,34,.5);
+}
+.screen > span{font-family:var(--cond); font-size:11px; letter-spacing:.4em; text-indent:.4em; color:rgba(43,38,34,.5)}
+.screen img{width:100%; height:100%; object-fit:cover; display:block}
+.screen .sub{
+  position:absolute; left:0; right:0; bottom:16px; font-family:var(--kr); font-size:12.5px; color:#FBF8F1;
+  text-shadow:0 1px 6px rgba(0,0,0,.45); letter-spacing:.02em;
+}
+/* handwriting over the main photo */
+.screen .hand{
+  --hand-color:var(--red);
+  position:absolute; right:-1%; bottom:16%; width:max-content; text-align:center; pointer-events:none; white-space:nowrap;
+  font-family:var(--hand); font-size:12.2cqw; line-height:1.04; color:var(--hand-color);
+  -webkit-text-stroke:.6px var(--hand-color); /* 획을 살짝 두껍게 */
+  transform:rotate(-16deg); transform-origin:right bottom;
+}
+.screen .hand span{
+  display:inline-block; white-space:pre; padding:0 .06em; margin:0 -.06em; /* 옆 글자와 겹치는 획이 잘리지 않게 */
+  clip-path:inset(-70% 160% -70% -60%); /* 좌우 여유: 앞 글자 밑으로 파고드는 g 꼬리 */
+}
+.screen .hand.write span{animation:ink .3s cubic-bezier(.3,.7,.4,1) forwards; animation-delay:var(--d)}
+@keyframes ink{to{clip-path:inset(-70% -10% -70% -60%)}}
+.cover .meta{margin-top:30px; font-size:14px; color:var(--ink-soft); line-height:2}
+.cover .meta strong{display:block; color:var(--ink); font-weight:600; font-size:15px}
 
-  body {
-    margin: 0;
-    background: var(--bg);
-    color: var(--fg);
-    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Pretendard",
-                 "Noto Sans KR", "Malgun Gothic", system-ui, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    text-rendering: optimizeLegibility;
-    display: flex;
-    flex-direction: column;
-    min-height: 100svh;
-    overflow-x: hidden;
-  }
+/* ── synopsis ── */
+.synopsis p.body{font-size:15px; line-height:2.2; text-wrap:balance}
+.synopsis .tag{
+  margin:34px auto 0; display:inline-block; font-family:var(--kr); font-size:13px; color:var(--ink-soft);
+  padding:10px 18px; border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+}
 
-  /* 배경 글로우 */
-  body::before {
-    content: "";
-    position: fixed;
-    inset: -30%;
-    z-index: -1;
-    background:
-      radial-gradient(42vmax 42vmax at 18% 12%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 62%),
-      radial-gradient(38vmax 38vmax at 84% 82%, color-mix(in srgb, var(--accent-2) 18%, transparent), transparent 62%);
-    filter: blur(20px);
-    animation: drift 22s ease-in-out infinite alternate;
-  }
+/* ── cast ── */
+.cast{background:var(--paper-deep)}
+.cast .two{display:grid; grid-template-columns:1fr 1fr; gap:0; border:1.5px solid var(--ink); border-radius:8px; overflow:hidden; background:var(--card)}
+.cast .who{padding:26px 14px}
+.cast .who + .who{border-left:1.5px solid var(--ink)}
+.cast .role{font-family:var(--cond); font-size:10.5px; letter-spacing:.4em; text-indent:.4em; color:var(--red); text-transform:uppercase}
+.cast .name{font-family:var(--disp); font-size:30px; line-height:1.1; margin:8px 0 2px}
+.cast .krn{font-size:16px; font-weight:600; letter-spacing:.14em; text-indent:.14em}
+.cast small{display:block; font-size:12.5px; color:var(--ink-soft); margin-top:8px; line-height:1.7}
 
-  @keyframes drift {
-    from { transform: translate3d(-2%, -1%, 0) scale(1); }
-    to   { transform: translate3d(3%, 2%, 0) scale(1.08); }
-  }
+/* ── screening (calendar) ── */
+.cal-head{font-family:var(--disp); font-size:34px; line-height:1; margin-bottom:6px}
+.cal-head i{font-style:italic; color:var(--red)}
+.cal-sub{font-family:var(--cond); font-size:11px; letter-spacing:.4em; text-indent:.4em; color:var(--ink-soft); margin-bottom:26px}
+table.cal{width:100%; border-collapse:collapse; font-variant-numeric:tabular-nums}
+table.cal th{font-family:var(--cond); font-weight:400; font-size:11px; color:var(--ink-soft); padding:8px 0; letter-spacing:.2em}
+table.cal th.sun, table.cal td.sun{color:var(--red)}
+table.cal td{font-family:var(--cond); font-weight:300; font-size:17px; padding:8px 0}
+table.cal td.dim{color:#C4BBA8}
+table.cal td .dday{
+  display:inline-grid; place-items:center; width:36px; height:36px; border-radius:50%;
+  background:var(--red); color:#FBF8F1; font-weight:500;
+}
+.countdown{margin-top:32px; display:flex; justify-content:center; gap:8px}
+.count{display:grid; gap:6px}
+.count b{
+  font-family:var(--cond); font-weight:400; font-size:26px; min-width:60px; padding:10px 0;
+  background:var(--card); border:1.5px solid var(--ink); border-radius:6px; font-variant-numeric:tabular-nums;
+}
+.count span{font-family:var(--cond); font-size:10.5px; letter-spacing:.26em; color:var(--ink-soft)}
+.dleft{margin-top:22px; font-size:13.5px; color:var(--ink-soft)}
+.dleft b{color:var(--red); font-family:var(--cond); font-size:19px; font-weight:500}
 
-  /* 위험 표시 줄무늬 */
-  .stripe {
-    height: 12px;
-    flex: none;
-    background: repeating-linear-gradient(
-      -45deg,
-      var(--stripe-a) 0 18px,
-      var(--stripe-b) 18px 36px
-    );
-    background-size: 50.91px 50.91px;
-    animation: slide 1.6s linear infinite;
-  }
-  .stripe--bottom { animation-direction: reverse; }
+/* ── stills (prints) ── */
+.stills{padding-left:0; padding-right:0}
+.stills .slug,.stills h2{padding:0 30px}
+.filmstrip{overflow-x:auto; scroll-snap-type:x mandatory; -webkit-overflow-scrolling:touch; scrollbar-width:none; padding:14px 0 18px}
+.filmstrip::-webkit-scrollbar{display:none}
+.strip-inner{display:flex; gap:18px; padding:0 30px; width:max-content; align-items:flex-start}
+.cell{scroll-snap-align:center; text-align:left}
+.cell .img{
+  height:250px; overflow:hidden; background:var(--card); padding:6px; border:1px solid var(--line);
+  box-shadow:0 14px 26px -18px rgba(43,38,34,.45); display:grid; place-items:center;
+  font-family:var(--cond); font-size:10.5px; letter-spacing:.35em; text-indent:.35em; color:rgba(43,38,34,.4);
+}
+.cell .img img{width:100%; height:100%; object-fit:cover; display:block}
+.cell .img{display:block}
+.cell:nth-child(odd) .img{transform:rotate(-1.2deg)}
+.cell:nth-child(even) .img{transform:rotate(1deg)}
+.cell.port .img{width:calc(250px * 2 / 3 + 14px)}  /* 세로 2:3 */
+.cell.land .img{width:calc(250px * 3 / 2 + 14px)}  /* 가로 3:2 */
+.cell .cap{font-family:var(--cond); font-size:10.5px; letter-spacing:.26em; color:var(--ink-soft); margin-top:14px; display:flex; justify-content:space-between}
+.cell .cap span:first-child{color:var(--red)}
+.hint{font-family:var(--cond); font-size:10.5px; letter-spacing:.3em; color:var(--ink-soft); margin-top:6px}
 
-  @keyframes slide {
-    to { background-position: 50.91px 0; }
-  }
+.cell .img{cursor:zoom-in}
 
-  main {
-    flex: 1;
-    display: grid;
-    place-items: center;
-    padding: clamp(20px, 6vw, 56px) clamp(16px, 5vw, 40px);
-  }
+/* ── lightbox ── */
+.lb{
+  position:fixed; inset:0; z-index:100; background:rgba(43,38,34,.985); display:flex; flex-direction:column;
+  opacity:0; pointer-events:none; transition:opacity .25s ease; touch-action:pan-y;
+}
+.lb.open{opacity:1; pointer-events:auto}
+.lb .bar{display:flex; justify-content:space-between; align-items:center; padding:max(14px, env(safe-area-inset-top)) 18px 10px; color:#C9BFAE; font-family:var(--cond); font-size:11px; letter-spacing:.3em}
+.lb .bar b{font-weight:400; color:var(--red)}
+.lb button{background:none; border:0; color:#EFE9DD; cursor:pointer; font-family:var(--cond); padding:8px}
+.lb .x{font-size:22px; line-height:1; letter-spacing:0}
+.lb .stage{flex:1; position:relative; display:flex; align-items:center; justify-content:center; overflow:hidden; padding:0 12px}
+.lb .stage img{max-width:100%; max-height:100%; object-fit:contain; display:block; box-shadow:0 30px 60px -30px rgba(0,0,0,.8); transition:transform .28s ease, opacity .28s ease}
+.lb .stage img.out-l{transform:translateX(-40px); opacity:0}
+.lb .stage img.out-r{transform:translateX(40px); opacity:0}
+.lb .nav{position:absolute; top:0; bottom:0; width:34%; opacity:0}
+.lb .nav.prev{left:0} .lb .nav.next{right:0}
+.lb .foot{display:flex; justify-content:center; gap:26px; padding:14px 0 max(22px, env(safe-area-inset-bottom)); color:#C9BFAE; font-family:var(--cond); font-size:11px; letter-spacing:.3em}
+.lb .foot button{font-size:11px; letter-spacing:.3em; color:#C9BFAE}
+.lb .foot button:active{color:#EFE9DD}
+body.lb-lock{overflow:hidden}
 
-  .card {
-    width: min(640px, 100%);
-    text-align: center;
-    padding: clamp(28px, 7vw, 56px) clamp(20px, 6vw, 48px);
-    border: 1px solid var(--line);
-    border-radius: 24px;
-    background: color-mix(in srgb, var(--bg-soft) 72%, transparent);
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    box-shadow: var(--shadow);
-    animation: rise .7s cubic-bezier(.21, .82, .3, 1) both;
-  }
+/* ── location ── */
+.loc{background:var(--paper-deep)}
+.map{aspect-ratio:2/3; overflow:hidden; border-radius:6px; border:1.5px solid var(--ink); margin-bottom:26px; background:#fff}
+.map img{width:100%; height:100%; object-fit:cover; display:block}
+.loc dl{display:grid; grid-template-columns:70px 1fr; gap:12px 14px; text-align:left; font-size:14px; font-family:var(--sans); font-weight:300}
+.loc dt{color:var(--red); font-family:var(--cond); font-size:11px; letter-spacing:.24em; padding-top:4px; text-transform:uppercase}
+.loc dd{color:var(--ink-soft); line-height:1.75}
+.loc dd b{color:var(--ink); font-weight:500}
+.btns{display:flex; gap:10px; margin-top:26px}
+.btns a{
+  flex:1; text-align:center; padding:13px 0; border:1.5px solid var(--ink); color:var(--ink); background:var(--card);
+  text-decoration:none; font-family:var(--cond); font-size:12.5px; letter-spacing:.2em; border-radius:6px; transition:.2s;
+}
+.btns a:hover{background:var(--ink); color:var(--paper)}
 
-  @keyframes rise {
-    from { opacity: 0; transform: translateY(18px); }
-  }
+/* ── gift ── */
+details.acct{border:1.5px solid var(--ink); border-radius:8px; margin-bottom:12px; background:var(--card); text-align:left; overflow:hidden}
+details.acct summary{list-style:none; cursor:pointer; padding:16px 20px; font-size:14px; font-weight:600; display:flex; justify-content:space-between; align-items:center}
+details.acct summary::-webkit-details-marker{display:none}
+details.acct summary::after{content:"+"; color:var(--red); font-family:var(--cond); font-size:20px; font-weight:300; transition:transform .25s}
+details.acct[open] summary::after{transform:rotate(45deg)}
+.acct-row{display:flex; justify-content:space-between; align-items:center; gap:10px; padding:14px 20px; border-top:1px dashed var(--line); font-size:13.5px; font-family:var(--sans); font-weight:300}
+.acct-row .who{color:var(--ink-soft); font-size:12px}
+.acct-row .num{font-variant-numeric:tabular-nums}
+.copy{border:1px solid var(--red); background:transparent; border-radius:4px; font-size:10.5px; padding:5px 10px; color:var(--red); font-family:var(--cond); letter-spacing:.14em; cursor:pointer}
+.copy:active{background:var(--red); color:#fff}
 
-  /* 콘 아이콘 */
-  .cone {
-    width: clamp(72px, 18vw, 104px);
-    height: auto;
-    display: block;
-    margin: 0 auto clamp(18px, 4vw, 26px);
-    animation: wobble 3.4s ease-in-out infinite;
-    transform-origin: 50% 92%;
-  }
+/* ── RSVP ── */
+.rsvp-btn{
+  display:inline-block; margin-top:28px; padding:14px 26px; background:var(--red); color:#FBF8F1; border:0; cursor:pointer;
+  font-family:var(--sans); font-size:13.5px; font-weight:500; letter-spacing:.04em; border-radius:999px; box-shadow:0 12px 24px -14px rgba(194,70,60,.7);
+}
+.rsvp{
+  position:fixed; inset:0; z-index:110; background:rgba(43,38,34,.55); display:flex; align-items:flex-end; justify-content:center;
+  opacity:0; pointer-events:none; transition:opacity .3s ease;
+}
+.rsvp.open{opacity:1; pointer-events:auto}
+.rsvp .card{
+  width:100%; max-width:430px; max-height:92dvh; overflow-y:auto; background:var(--paper); color:var(--ink);
+  border-radius:18px 18px 0 0; padding:22px 24px max(28px, env(safe-area-inset-bottom));
+  transform:translateY(40px); transition:transform .35s cubic-bezier(.2,.8,.2,1); box-shadow:0 -20px 60px rgba(0,0,0,.25);
+}
+.rsvp.open .card{transform:none}
+.rsvp .hd{text-align:center; margin-bottom:18px}
+.rsvp .hd h3{font-family:var(--kr); font-size:18px; font-weight:600; letter-spacing:.02em}
+.rsvp .hd p{font-size:12.5px; color:var(--ink-soft); margin-top:6px; font-family:var(--sans); font-weight:300}
+.rsvp .f{margin-bottom:14px}
+.rsvp .l{display:block; font-family:var(--sans); font-weight:500; font-size:12.5px; letter-spacing:.04em; color:var(--ink); margin-bottom:7px}
+.rsvp .l i{font-style:normal; color:var(--red)}
+.rsvp .l em{font-style:normal; font-weight:300; color:#A69E92; margin-left:6px; font-size:11.5px}
+.rsvp input[type=text],.rsvp textarea{
+  width:100%; background:var(--card); border:1.5px solid var(--line); border-radius:8px; padding:12px 14px; font-family:var(--sans); font-size:15px; color:var(--ink); outline:0;
+}
+.rsvp input[type=text]:focus,.rsvp textarea:focus{border-color:var(--ink)}
+.rsvp textarea{min-height:74px; resize:vertical; font-weight:300; font-size:14px}
+.rsvp .seg{display:flex; gap:8px}
+.rsvp .seg label{flex:1; position:relative}
+.rsvp .seg input{position:absolute; opacity:0; inset:0; pointer-events:none}
+.rsvp .seg span{
+  display:block; text-align:center; padding:12px 6px; border:1.5px solid var(--line); border-radius:8px; background:var(--card);
+  font-family:var(--sans); font-size:14px; cursor:pointer; transition:.15s;
+}
+.rsvp .seg input:checked + span{border-color:var(--ink); background:var(--ink); color:var(--paper)}
+.rsvp .seg.red input:checked + span{border-color:var(--red); background:var(--red)}
+.rsvp .cnt{display:flex; align-items:center; width:max-content; border:1.5px solid var(--line); border-radius:8px; background:var(--card); overflow:hidden}
+.rsvp .cnt button{width:44px; height:44px; border:0; background:transparent; font-size:20px; color:var(--ink); cursor:pointer; font-family:var(--cond)}
+.rsvp .cnt b{min-width:56px; text-align:center; font-family:var(--cond); font-weight:400; font-size:17px}
+.rsvp .cnt b small{font-family:var(--sans); font-size:12px; color:var(--ink-soft); margin-left:2px}
+.rsvp .f.hide{display:none}
+.rsvp .err{font-family:var(--sans); font-size:12px; color:var(--red); min-height:16px; margin:2px 0 8px; text-align:center}
+.rsvp .acts{display:grid; gap:10px; margin-top:4px}
+.rsvp .go{padding:15px; border:0; border-radius:999px; background:var(--red); color:#FBF8F1; font-family:var(--sans); font-size:15px; font-weight:500; cursor:pointer; letter-spacing:.02em}
+.rsvp .later{padding:8px; border:0; background:none; color:var(--ink-soft); font-family:var(--sans); font-size:13px; font-weight:300; cursor:pointer; text-decoration:underline; text-underline-offset:4px}
+.rsvp .done{display:none; text-align:center; padding:26px 0 10px}
+.rsvp .done .big{font-family:var(--hand); font-size:44px; color:var(--red); line-height:1; margin-bottom:14px}
+.rsvp .done p{font-size:14px; line-height:1.9}
+.rsvp .done button{margin-top:20px}
+.rsvp.sent form{display:none} .rsvp.sent .done{display:block}
+body.rsvp-lock{overflow:hidden}
 
-  @keyframes wobble {
-    0%, 100% { transform: rotate(-4deg); }
-    50%      { transform: rotate(4deg); }
-  }
+/* ── BGM toggle ── */
+.bgm{
+  position:fixed; top:max(12px, env(safe-area-inset-top)); right:14px; z-index:90; width:40px; height:40px; border-radius:50%;
+  border:1.5px solid var(--ink); background:rgba(246,241,230,.9); color:var(--ink); cursor:pointer; display:grid; place-items:center;
+  backdrop-filter:blur(6px); -webkit-backdrop-filter:blur(6px); box-shadow:0 8px 20px -12px rgba(43,38,34,.5);
+}
+.bgm svg{width:18px; height:18px; display:block}
+.bgm .bars{display:none; gap:2px; align-items:flex-end; height:14px}
+.bgm .bars i{display:block; width:2.5px; background:var(--red); border-radius:1px; animation:eq .9s ease-in-out infinite}
+.bgm .bars i:nth-child(2){animation-delay:-.3s} .bgm .bars i:nth-child(3){animation-delay:-.6s}
+@keyframes eq{0%,100%{height:4px} 50%{height:14px}}
+.bgm.on .bars{display:flex} .bgm.on svg{display:none}
+@media (prefers-reduced-motion: reduce){ .bgm .bars i{animation:none; height:9px} }
 
-  .badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    padding: 6px 14px;
-    margin-bottom: 18px;
-    font-size: clamp(11px, 2.6vw, 12px);
-    font-weight: 700;
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    color: var(--accent);
-    border: 1px solid color-mix(in srgb, var(--accent) 40%, transparent);
-    border-radius: 999px;
-    background: color-mix(in srgb, var(--accent) 12%, transparent);
-  }
+/* ── guest upload link ── */
+.share{background:var(--paper-deep)}
+.share p.body{font-size:14.5px; line-height:2; text-wrap:balance}
+.share .go{
+  display:inline-block; margin-top:22px; padding:14px 28px; border:1.5px solid var(--ink); border-radius:999px; background:var(--card); color:var(--ink);
+  text-decoration:none; font-family:var(--sans); font-size:13.5px; font-weight:500; letter-spacing:.04em;
+}
+.share .go:active{background:var(--ink); color:var(--paper)}
+.share .soon{font-family:var(--sans); font-weight:300; font-size:12.5px; color:var(--ink-soft); margin-top:16px}
+.share[data-open="1"] .soon{display:none} .share:not([data-open="1"]) .go{display:none}
 
-  .badge .dot {
-    width: 7px;
-    height: 7px;
-    border-radius: 50%;
-    background: var(--accent);
-    animation: pulse 1.5s ease-in-out infinite;
-  }
+/* ── credits (footer) ── */
+footer{padding:70px 30px 84px; text-align:center; background:var(--ink); color:#EFE9DD}
+footer .unit{margin-bottom:22px}
+footer .u-role{font-family:var(--cond); font-size:10px; letter-spacing:.4em; text-indent:.4em; color:#A89C8A; text-transform:uppercase}
+footer .u-name{font-size:14.5px; margin-top:4px}
+footer .fin{font-family:var(--disp); font-style:italic; font-size:40px; margin-top:40px; line-height:1}
+footer .fin small{display:block; font-style:normal; font-family:var(--cond); font-size:10px; letter-spacing:.4em; text-indent:.4em; color:#A89C8A; margin-top:14px}
+footer .date{font-family:var(--cond); font-size:11px; letter-spacing:.3em; color:#A89C8A; margin-top:28px}
 
-  @keyframes pulse {
-    0%, 100% { opacity: 1; transform: scale(1); }
-    50%      { opacity: .35; transform: scale(.75); }
-  }
+/* cover load-in */
+.cover > *{opacity:0; animation:rise 1.1s ease forwards}
+.cover .top{animation-delay:.2s}
+.cover .ticket-wrap{animation:handed 1.3s cubic-bezier(.2,.8,.2,1) .45s forwards}
+.cover .screen{animation-delay:1.1s}
+.cover .meta{animation-delay:1.4s}
+@keyframes rise{from{opacity:0; transform:translateY(16px)} to{opacity:1; transform:none}}
+@keyframes handed{from{opacity:0; transform:translateY(40px) rotate(4deg) scale(.96)} to{opacity:1; transform:none}}
 
-  h1 {
-    margin: 0;
-    font-size: clamp(44px, 15vw, 92px);
-    line-height: 1.05;
-    letter-spacing: -.02em;
-    font-weight: 800;
-    background: linear-gradient(135deg, var(--accent), var(--accent-2));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-  }
-
-  .sub {
-    margin: 10px 0 0;
-    font-size: clamp(12px, 3.2vw, 14px);
-    font-weight: 600;
-    letter-spacing: .32em;
-    text-indent: .32em;
-    color: var(--fg-dim);
-  }
-
-  .desc {
-    margin: clamp(20px, 5vw, 28px) auto 0;
-    max-width: 34ch;
-    font-size: clamp(14px, 3.8vw, 16px);
-    line-height: 1.75;
-    color: var(--fg-dim);
-    word-break: keep-all;
-  }
-
-  /* 진행 바 */
-  .progress {
-    margin-top: clamp(26px, 6vw, 34px);
-  }
-
-  .track {
-    height: 8px;
-    border-radius: 999px;
-    overflow: hidden;
-    background: color-mix(in srgb, var(--fg) 10%, transparent);
-  }
-
-  .bar {
-    height: 100%;
-    width: 0;
-    border-radius: 999px;
-    background: linear-gradient(90deg, var(--accent), var(--accent-2));
-    animation: fill 2.2s cubic-bezier(.25, .8, .3, 1) .35s forwards;
-  }
-
-  @keyframes fill {
-    to { width: 68%; }
-  }
-
-  .progress-meta {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-    font-size: clamp(11px, 3vw, 12px);
-    font-variant-numeric: tabular-nums;
-    color: var(--fg-dim);
-  }
-
-  footer {
-    flex: none;
-    padding: 20px 16px calc(20px + env(safe-area-inset-bottom));
-    text-align: center;
-    font-size: 12px;
-    color: var(--fg-dim);
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    *, *::before, *::after {
-      animation-duration: .001ms !important;
-      animation-iteration-count: 1 !important;
-      transition-duration: .001ms !important;
-    }
-    .bar { width: 68%; }
-  }
+/* reveal */
+.reveal{opacity:0; transform:translateY(22px); transition:opacity .9s ease, transform .9s ease}
+.reveal.in{opacity:1; transform:none}
+@media (prefers-reduced-motion: reduce){
+  .reveal{opacity:1; transform:none; transition:none}
+  .cover > *{animation:none !important; opacity:1}
+  .screen .hand span{animation:none; clip-path:none}
+}
 </style>
 </head>
 <body>
+<!-- BGM: music/bgm.mp3 (Harumachi Music — Morning With You, Pixabay) · 첫 터치 후 재생, ♪ 버튼으로 끄고 켜기 -->
+<audio id="bgm" src="music/bgm.mp3" loop preload="auto"></audio>
+<button class="bgm" id="bgm-btn" type="button" aria-label="배경음악 켜기" aria-pressed="false">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/></svg>
+  <span class="bars" aria-hidden="true"><i></i><i></i><i></i></span>
+</button>
 
-<div class="stripe" aria-hidden="true"></div>
+<div class="sheet">
 
-<main>
-  <section class="card">
-    <svg class="cone" viewBox="0 0 120 120" role="img" aria-label="공사 표지 콘">
-      <ellipse cx="60" cy="104" rx="46" ry="9" fill="rgba(0,0,0,.18)"/>
-      <rect x="10" y="96" width="100" height="14" rx="7" fill="#e2571f"/>
-      <path d="M60 12 L92 96 H28 Z" fill="#ff7a45"/>
-      <path d="M60 12 L70 38 H50 Z" fill="#ff9466"/>
-      <path d="M46 50 H74 L78 64 H42 Z" fill="#fff5e6"/>
-      <path d="M38 72 H82 L86 86 H34 Z" fill="#fff5e6"/>
-    </svg>
+  <div class="cover">
+    <p class="top"><span>Wedding invitation</span><span>2027</span></p>
 
-    <span class="badge"><span class="dot"></span>Under Construction</span>
-
-    <h1>공사중</h1>
-    <p class="sub">SITE IN PROGRESS</p>
-
-    <p class="desc">
-      더 나은 모습으로 찾아뵙기 위해 페이지를 준비하고 있습니다.<br>
-      조금만 기다려 주세요.
-    </p>
-
-    <div class="progress">
-      <div class="track" role="progressbar" aria-label="작업 진행률" aria-valuenow="68" aria-valuemin="0" aria-valuemax="100">
-        <div class="bar"></div>
+    <div class="ticket-wrap">
+      <div class="ticket">
+        <div class="t-main">
+          <p class="admit"><span>Save the date</span><span>Sat · Feb 27</span></p>
+          <p class="title"><span>Hanyong<i>&amp;</i></span><br>Sejeong</p>
+          <p class="krn">조한용 · 한세정</p>
+          <div class="t-grid">
+            <div><small>Date</small><b>02.27 <em>2027</em></b></div>
+            <div><small>Time</small><b>12:30 <em>PM</em></b></div>
+            <div><small>Hall</small><b>더베르G <em>2F</em></b></div>
+          </div>
+          <p class="venue">코레일유통사옥 2층 · 서울 영등포구</p>
+        </div>
+        <div class="t-stub">
+          <span class="vert">The wedding day</span>
+          <span class="heart">♥</span>
+          <span class="no">No.270227</span>
+        </div>
       </div>
-      <div class="progress-meta">
-        <span>작업 진행 중</span>
-        <span>68%</span>
+    </div>
+
+    <!-- photos/main-zoom.jpg = 6R6A4831.jpg 1.25배 크롭 (전체 컷은 photos/main.jpg) -->
+    <div class="screen">
+      <img src="photos/main-zoom.jpg" alt="조한용 · 한세정">
+      <p class="hand" aria-label="We're getting married">We're getting<br>married</p>
+    </div>
+
+    <p class="meta">
+      <strong>2027년 2월 27일 토요일 오후 12시 30분</strong>
+      더베르G · 코레일유통사옥 2층
+    </p>
+  </div>
+
+  <section class="synopsis reveal">
+    <p class="slug">Invitation</p>
+    <h2>소중한 분들을 초대합니다</h2>
+    <p class="body">
+      사랑은 매일 해내는 일이라고 합니다.<br>
+      그 매일을 함께할 사람을 만났습니다.<br><br>
+      이제 그 첫 번째 하루를 시작하려 합니다.<br>
+      그 시작에 함께해 주시면 감사하겠습니다.
+    </p>
+  </section>
+
+  <section class="cast reveal">
+    <p class="slug ko">신랑 &amp; 신부</p>
+    <h2>저희를 소개합니다</h2>
+    <div class="two">
+      <div class="who">
+        <p class="role ko">신랑</p>
+        <p class="name">Hanyong</p>
+        <p class="krn">조한용</p>
+        <small>조준호 · 서숙애의<br>아들</small>
+      </div>
+      <div class="who">
+        <p class="role ko">신부</p>
+        <p class="name">Sejeong</p>
+        <p class="krn">한세정</p>
+        <small>한상득 · 유난미의<br>딸</small>
       </div>
     </div>
   </section>
-</main>
 
-<footer>
-  &copy; <span id="year">2026</span> ttony99
-</footer>
+  <section class="screening reveal">
+    <p class="slug">Wedding day</p>
+    <p class="cal-head">February <i>27</i></p>
+    <p class="cal-sub">2027 · Saturday · 12:30 pm</p>
+    <table class="cal">
+      <tr><th class="sun">SUN</th><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th><th>SAT</th></tr>
+      <tr><td class="sun dim">31</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td></tr>
+      <tr><td class="sun">7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td></tr>
+      <tr><td class="sun">14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
+      <tr><td class="sun">21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td><td><span class="dday">27</span></td></tr>
+      <tr><td class="sun">28</td><td class="dim">1</td><td class="dim">2</td><td class="dim">3</td><td class="dim">4</td><td class="dim">5</td><td class="dim">6</td></tr>
+    </table>
+    <div class="countdown" id="countdown">
+      <div class="count"><b id="cd-d">0</b><span>DAYS</span></div>
+      <div class="count"><b id="cd-h">0</b><span>HOURS</span></div>
+      <div class="count"><b id="cd-m">0</b><span>MIN</span></div>
+      <div class="count"><b id="cd-s">0</b><span>SEC</span></div>
+    </div>
+    <p class="dleft">한용 ♥ 세정의 결혼식이 <b id="cd-d2">0</b>일 남았습니다</p>
+    <button class="rsvp-btn" type="button" data-rsvp-open>참석 여부 알려주기</button>
+  </section>
 
-<div class="stripe stripe--bottom" aria-hidden="true"></div>
+  <section class="stills reveal">
+    <p class="slug">Moments</p>
+    <h2>미리 보는 장면들</h2>
+    <!-- photos/gallery-web/ = photos/Gallery/ 원본을 긴 변 1200px로 축소한 웹용 (이름순) -->
+    <div class="filmstrip"><div class="strip-inner">
+        <div class="cell port"><div class="img"><img src="photos/gallery-web/01.jpg" alt="" loading="lazy"></div><p class="cap"><span>SCENE 01</span><span>01 / 23</span></p></div>
+        <div class="cell port"><div class="img"><img src="photos/gallery-web/02.jpg" alt="" loading="lazy"></div><p class="cap"><span>SCENE 02</span><span>02 / 23</span></p></div>
+        <div class="cell port"><div class="img"><img src="photos/gallery-web/03.jpg" alt="" loading="lazy"></div><p class="cap"><span>SCENE 03</span><span>03 / 23</span></p></div>
+        <div class="cell port"><div class="img"><img src="photos/gallery-web/04.jpg" alt="" loading="lazy"></div><p class="cap"><span>SCENE 04</span><span>04 / 23</span></p></div>
+        <div class="cell land"><div class="img"><img src="photos/gallery-web/05.jpg" alt="" loading="lazy"></div><p class="cap"><span>SCENE 05</span><span>05 / 23</span></p></div>
+        <div class="cell land"><div class="img"><img src="photos/gallery-web/06.jpg" alt="" loading="lazy"></div><p class="cap"><span>SCENE 06</span><span>06 / 23</span></p></div>
+        <div class="cell land"><div class="img"><img src="photos/gallery-web/07.jpg" alt="" loading="lazy"></div><p class="cap"><span>SCENE 07</span><span>07 / 23</span></p></div>
+        <div class="cell port"><div class="img"><img src="photos/gallery-web/08.jpg" alt="" loading="lazy"></div><p class="cap"><span>SCENE 08</span><span>08 / 23</span></p></div>
+        <div class="cell port"><div class="img"><img src="photos/gallery-web/09.jpg" alt="" loading="lazy"></div><p class="cap"><span>SCENE 09</span><span>09 / 23</span></p></div>
+        <div class="cell land"><div class="img"><img src="photos/gallery-web/10.jpg" alt="" loading="lazy"></div><p class="cap"><span>SCENE 10</span><span>10 / 23</span></p></div>
+        <div class="cell port"><div class="img"><img src="photos/gallery-web/11.jpg" alt="" loading="lazy"></div><p class="cap"><span>SCENE 11</span><span>11 / 23</span></p></div>
+        <div class="cell port"><div class="img"><img src="photos/gallery-web/12.jpg" alt="" loading="lazy"></div><p class="cap"><span>SCENE 12</span><span>12 / 23</span></p></div>
+        <div class="cell land"><div class="img"><img src="photos/gallery-web/13.jpg" alt="" loading="lazy"></div><p class="cap"><span>SCENE 13</span><span>13 / 23</span></p></div>
+        <div class="cell port"><div class="img"><img src="photos/gallery-web/14.jpg" alt="" loading="lazy"></div><p class="cap"><span>SCENE 14</span><span>14 / 23</span></p></div>
+        <div class="cell port"><div class="img"><img src="photos/gallery-web/15.jpg" alt="" loading="lazy"></div><p class="cap"><span>SCENE 15</span><span>15 / 23</span></p></div>
+        <div class="cell port"><div class="img"><img src="photos/gallery-web/16.jpg" alt="" loading="lazy"></div><p class="cap"><span>SCENE 16</span><span>16 / 23</span></p></div>
+        <div class="cell port"><div class="img"><img src="photos/gallery-web/17.jpg" alt="" loading="lazy"></div><p class="cap"><span>SCENE 17</span><span>17 / 23</span></p></div>
+        <div class="cell port"><div class="img"><img src="photos/gallery-web/18.jpg" alt="" loading="lazy"></div><p class="cap"><span>SCENE 18</span><span>18 / 23</span></p></div>
+        <div class="cell port"><div class="img"><img src="photos/gallery-web/19.jpg" alt="" loading="lazy"></div><p class="cap"><span>SCENE 19</span><span>19 / 23</span></p></div>
+        <div class="cell port"><div class="img"><img src="photos/gallery-web/20.jpg" alt="" loading="lazy"></div><p class="cap"><span>SCENE 20</span><span>20 / 23</span></p></div>
+        <div class="cell port"><div class="img"><img src="photos/gallery-web/21.jpg" alt="" loading="lazy"></div><p class="cap"><span>SCENE 21</span><span>21 / 23</span></p></div>
+        <div class="cell port"><div class="img"><img src="photos/gallery-web/22.jpg" alt="" loading="lazy"></div><p class="cap"><span>SCENE 22</span><span>22 / 23</span></p></div>
+        <div class="cell port"><div class="img"><img src="photos/gallery-web/23.jpg" alt="" loading="lazy"></div><p class="cap"><span>SCENE 23</span><span>23 / 23</span></p></div>
+      </div></div>
+    <p class="hint">◂ SWIPE ▸</p>
+  </section>
+
+  <section class="loc reveal">
+    <p class="slug">Location</p>
+    <h2>오시는 길</h2>
+    <div class="map"><img src="assets/yakdo-map.png" alt="더베르G 약도"></div>
+    <dl>
+      <dt>Address</dt><dd><b>더베르G</b> 코레일유통사옥 2층<br>서울특별시 영등포구 국회대로 612<br>TEL 02-2088-5272</dd>
+      <dt>Subway</dt><dd>2호선 · 5호선 영등포구청역 4번 출구 도보 약 7분</dd>
+      <dt>Bus</dt><dd>신화병원 605 · 661 · 760 · 700 · 5616 · 5714<br>삼환아파트 직행 8000 · 9030</dd>
+      <dt>Shuttle</dt><dd>영등포구청역 5번 출구 뒷편 ↔ 주차장 입구 좌측</dd>
+      <dt>Parking</dt><dd>네비 「더베르G」 검색 · 코레일유통사옥 주차장 (약 400대)</dd>
+    </dl>
+    <div class="btns">
+      <a href="https://map.kakao.com/link/search/%EB%8D%94%EB%B2%A0%EB%A5%B4G" target="_blank" rel="noopener">KAKAO MAP</a>
+      <a href="https://map.naver.com/p/search/%EB%8D%94%EB%B2%A0%EB%A5%B4G" target="_blank" rel="noopener">NAVER MAP</a>
+    </div>
+  </section>
+
+  <section class="gift reveal">
+    <p class="slug">With love</p>
+    <h2>마음 전하실 곳</h2>
+    <details class="acct">
+      <summary>신랑 측 계좌번호</summary>
+      <div class="acct-row"><span><span class="who">신랑 </span>조한용</span><span class="num">국민 123456-01-234567</span><button class="copy" data-num="국민 123456-01-234567">COPY</button></div>
+      <div class="acct-row"><span><span class="who">아버지 </span>조준호</span><span class="num">신한 110-234-567890</span><button class="copy" data-num="신한 110-234-567890">COPY</button></div>
+    </details>
+    <details class="acct">
+      <summary>신부 측 계좌번호</summary>
+      <div class="acct-row"><span><span class="who">신부 </span>한세정</span><span class="num">농협 302-5113-7881-11</span><button class="copy" data-num="농협 302-5113-7881-11">COPY</button></div>
+      <div class="acct-row"><span><span class="who">어머니 </span>유난미</span><span class="num">우리 1002-345-678901</span><button class="copy" data-num="우리 1002-345-678901">COPY</button></div>
+    </details>
+  </section>
+
+  <!-- 하객 사진·영상 보내기: 예식 당일부터 버튼 표시 (URL 에 #upload 를 붙이면 미리 볼 수 있음) -->
+  <section class="share reveal" id="share">
+    <p class="slug">Moments</p>
+    <h2>그날의 장면을 나눠주세요</h2>
+    <p class="body">결혼식에서 담아주신 사진과 영상을<br>저희에게 보내주시면 오래 간직하겠습니다.</p>
+    <a class="go" href="upload.html">사진 · 영상 보내기</a>
+    <p class="soon">예식 당일, 이 자리에 보내기 버튼이 열립니다.</p>
+  </section>
+
+  <footer class="reveal">
+    <div class="unit"><p class="u-role ko">신랑 · 신부</p><p class="u-name">조한용 · 한세정</p></div>
+    <div class="unit"><p class="u-role">Parents</p><p class="u-name">조준호 · 서숙애 · 한상득 · 유난미</p></div>
+    <div class="unit"><p class="u-role">And</p><p class="u-name">이 자리에 함께해 주신 모든 분들</p></div>
+    <p class="fin">fin.<small>and our story continues</small></p>
+    <p class="date">2027 . 02 . 27 · SEOUL · THE VER:G</p>
+  </footer>
+
+</div>
+
+<!-- RSVP 팝업: 첫 방문 시 자동으로 열림 · 응답 저장은 sendRSVP()에 연결 -->
+<div class="rsvp" id="rsvp" role="dialog" aria-modal="true" aria-labelledby="rsvp-t">
+  <div class="card">
+    <div class="hd">
+      <h3 id="rsvp-t">참석 여부를 알려주세요</h3>
+      <p>식사 준비를 위해 참석 여부를 미리 알려주시면 큰 도움이 됩니다.</p>
+    </div>
+    <form id="rsvp-form" novalidate>
+      <div class="f">
+        <label class="l" for="r-name">성함 <i>*</i></label>
+        <input type="text" id="r-name" name="name" autocomplete="name" placeholder="홍길동">
+      </div>
+      <div class="f">
+        <span class="l">어느 쪽 하객이신가요? <i>*</i></span>
+        <div class="seg">
+          <label><input type="radio" name="side" value="신랑측"><span>신랑측</span></label>
+          <label><input type="radio" name="side" value="신부측"><span>신부측</span></label>
+        </div>
+      </div>
+      <div class="f">
+        <span class="l">참석 여부 <i>*</i></span>
+        <div class="seg red">
+          <label><input type="radio" name="attend" value="참석"><span>참석합니다</span></label>
+          <label><input type="radio" name="attend" value="불참"><span>참석이 어렵습니다</span></label>
+        </div>
+      </div>
+      <div class="f" id="r-count-f">
+        <span class="l">참석 인원 <em>본인 포함</em></span>
+        <div class="cnt"><button type="button" data-d="-1" aria-label="줄이기">&minus;</button><b><span id="r-count">1</span><small>명</small></b><button type="button" data-d="1" aria-label="늘리기">+</button></div>
+      </div>
+      <div class="f" id="r-meal-f">
+        <span class="l">식사 여부 <em>선택</em></span>
+        <div class="seg">
+          <label><input type="radio" name="meal" value="식사함"><span>식사합니다</span></label>
+          <label><input type="radio" name="meal" value="식사안함"><span>안합니다</span></label>
+          <label><input type="radio" name="meal" value="미정"><span>미정</span></label>
+        </div>
+      </div>
+      <div class="f">
+        <label class="l" for="r-msg">축하 메시지 <em>선택</em></label>
+        <textarea id="r-msg" name="message" placeholder="두 사람에게 한마디"></textarea>
+      </div>
+      <p class="err" id="r-err"></p>
+      <div class="acts">
+        <button type="submit" class="go">보내기</button>
+        <button type="button" class="later" data-rsvp-close>나중에 할게요</button>
+      </div>
+    </form>
+    <div class="done">
+      <p class="big">Thank you</p>
+      <p>응답이 전달되었습니다.<br>소중한 시간 내어 함께해 주셔서 감사합니다.</p>
+      <button type="button" class="later" data-rsvp-close>닫기</button>
+    </div>
+  </div>
+</div>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true" aria-label="사진 크게 보기">
+  <div class="bar"><span>SCENE <b id="lb-n">01</b></span><span id="lb-c">01 / 23</span><button class="x" id="lb-x" aria-label="닫기">×</button></div>
+  <div class="stage" id="lb-stage">
+    <img id="lb-img" src="" alt="">
+    <button class="nav prev" id="lb-prev" aria-label="이전"></button>
+    <button class="nav next" id="lb-next" aria-label="다음"></button>
+  </div>
+  <div class="foot"><button id="lb-prev2">◂ PREV</button><span>SWIPE</span><button id="lb-next2">NEXT ▸</button></div>
+</div>
 
 <script>
-  document.getElementById('year').textContent = new Date().getFullYear();
-</script>
+// scroll reveal
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+}), {threshold:.12});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
+// countdown to the ceremony
+const target = new Date('2027-02-27T12:30:00+09:00').getTime();
+const cdD = document.getElementById('cd-d'), cdH = document.getElementById('cd-h'),
+      cdM = document.getElementById('cd-m'), cdS = document.getElementById('cd-s'),
+      cdD2 = document.getElementById('cd-d2');
+function tick(){
+  const diff = Math.max(0, target - Date.now());
+  const d = Math.floor(diff/86400000), h = Math.floor(diff/3600000)%24,
+        m = Math.floor(diff/60000)%60, s = Math.floor(diff/1000)%60;
+  cdD.textContent = d; cdH.textContent = h; cdM.textContent = m; cdS.textContent = s;
+  cdD2.textContent = Math.ceil(diff/86400000);
+}
+tick(); setInterval(tick, 1000);
+
+// always open at the top on reload
+if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+window.scrollTo(0, 0);
+
+// handwriting: split into letters; starts writing when the photo scrolls into view
+document.querySelectorAll('.screen .hand').forEach(el => {
+  let i = 0, start = .25, step = .085;
+  Array.from(el.childNodes).forEach(n => {
+    if (n.nodeType !== 3) return;
+    const frag = document.createDocumentFragment();
+    for (const ch of n.textContent) {
+      const sp = document.createElement('span'); sp.textContent = ch;
+      sp.style.setProperty('--d', (start + (i++) * step) + 's'); frag.appendChild(sp);
+    }
+    n.replaceWith(frag);
+  });
+  const shot = el.closest('.screen');
+  new IntersectionObserver((es, o) => es.forEach(e => {
+    if (e.isIntersecting) { el.classList.add('write'); o.disconnect(); }
+  }), {threshold:.9}).observe(shot);
+});
+
+// lightbox: tap a print to enlarge, swipe / arrows / keys to move
+(() => {
+  const srcs = [...document.querySelectorAll('.cell .img img')].map(i => i.getAttribute('src'));
+  if (!srcs.length) return;
+  const lb = document.getElementById('lb'), img = document.getElementById('lb-img'),
+        n = document.getElementById('lb-n'), c = document.getElementById('lb-c'), stage = document.getElementById('lb-stage');
+  let cur = 0, dir = 0;
+  const pad = v => String(v + 1).padStart(2, '0');
+  function show(i, d) {
+    cur = (i + srcs.length) % srcs.length;
+    if (d) { img.classList.add(d > 0 ? 'out-r' : 'out-l'); }
+    setTimeout(() => {
+      img.src = srcs[cur]; n.textContent = pad(cur); c.textContent = pad(cur) + ' / ' + String(srcs.length).padStart(2, '0');
+      img.classList.remove('out-l', 'out-r');
+      img.classList.add(d > 0 ? 'out-l' : 'out-r'); void img.offsetWidth; img.classList.remove('out-l', 'out-r');
+      [cur - 1, cur + 1].forEach(k => { new Image().src = srcs[(k + srcs.length) % srcs.length]; }); // preload neighbours
+    }, d ? 140 : 0);
+  }
+  function open(i) { show(i, 0); lb.classList.add('open'); document.body.classList.add('lb-lock'); }
+  function close() { lb.classList.remove('open'); document.body.classList.remove('lb-lock'); }
+  document.querySelectorAll('.cell .img').forEach((el, i) => el.addEventListener('click', () => open(i)));
+  document.getElementById('lb-x').addEventListener('click', close);
+  ['lb-prev', 'lb-prev2'].forEach(id => document.getElementById(id).addEventListener('click', () => show(cur - 1, -1)));
+  ['lb-next', 'lb-next2'].forEach(id => document.getElementById(id).addEventListener('click', () => show(cur + 1, 1)));
+  document.addEventListener('keydown', e => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'ArrowLeft') show(cur - 1, -1); else if (e.key === 'ArrowRight') show(cur + 1, 1); else if (e.key === 'Escape') close();
+  });
+  let x0 = null, y0 = null;
+  stage.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; }, {passive:true});
+  stage.addEventListener('touchend', e => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0; x0 = y0 = null;
+    if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) show(cur + (dx < 0 ? 1 : -1), dx < 0 ? 1 : -1);
+    else if (Math.abs(dy) > 80 && Math.abs(dy) > Math.abs(dx)) close();
+  }, {passive:true});
+})();
+
+// ── RSVP ──
+// 저장처 연결 지점: 응답 객체 하나를 받아 true/false(Promise)를 돌려주면 됨 (Google 설문/Netlify Forms 등).
+// 지금은 서버로 보내지 않고 브라우저(localStorage)에만 남김.
+async function sendRSVP(data) {
+  try { localStorage.setItem('rsvp-data', JSON.stringify(data)); } catch (e) {}
+  return true;
+}
+(() => {
+  const box = document.getElementById('rsvp'), form = document.getElementById('rsvp-form'), err = document.getElementById('r-err');
+  const countEl = document.getElementById('r-count'), countF = document.getElementById('r-count-f'), mealF = document.getElementById('r-meal-f');
+  let count = 1;
+  const get = k => { try { return localStorage.getItem(k) || sessionStorage.getItem(k); } catch (e) { return null; } };
+  function open() { box.classList.add('open'); document.body.classList.add('rsvp-lock'); }
+  function close() { box.classList.remove('open'); document.body.classList.remove('rsvp-lock'); try { sessionStorage.setItem('rsvp-later', '1'); } catch (e) {} }
+  document.querySelectorAll('[data-rsvp-open]').forEach(b => b.addEventListener('click', open));
+  document.querySelectorAll('[data-rsvp-close]').forEach(b => b.addEventListener('click', close));
+  box.addEventListener('click', e => { if (e.target === box) close(); });
+  form.querySelectorAll('.cnt button').forEach(b => b.addEventListener('click', () => {
+    count = Math.min(10, Math.max(1, count + Number(b.dataset.d))); countEl.textContent = count;
+  }));
+  form.querySelectorAll('input[name=attend]').forEach(r => r.addEventListener('change', () => {
+    const no = form.attend.value === '불참'; countF.classList.toggle('hide', no); mealF.classList.toggle('hide', no);
+  }));
+  form.addEventListener('submit', async e => {
+    e.preventDefault();
+    const name = form.name.value.trim(), side = form.side.value, attend = form.attend.value;
+    if (!name) return err.textContent = '성함을 입력해 주세요.';
+    if (!side) return err.textContent = '신랑측 / 신부측을 선택해 주세요.';
+    if (!attend) return err.textContent = '참석 여부를 선택해 주세요.';
+    err.textContent = '';
+    const data = { name, side, attend, count: attend === '참석' ? count : 0, meal: attend === '참석' ? (form.meal.value || '') : '',
+                   message: form.message.value.trim(), at: new Date().toISOString() };
+    const btn = form.querySelector('.go'); btn.disabled = true; btn.textContent = '보내는 중…';
+    const ok = await sendRSVP(data).catch(() => false);
+    btn.disabled = false; btn.textContent = '보내기';
+    if (!ok) return err.textContent = '전송에 실패했습니다. 잠시 후 다시 시도해 주세요.';
+    try { localStorage.setItem('rsvp-done', '1'); } catch (e) {}
+    box.classList.add('sent');
+  });
+  // 첫 방문: 이미 응답했으면 안 띄움, "나중에"는 이번 방문 동안만 안 띄움
+  if (get('rsvp-done')) box.classList.add('sent');
+  else if (!get('rsvp-later')) setTimeout(open, 1200);
+})();
+
+// ── BGM ──
+// 모바일은 소리 자동재생을 막으므로: 첫 터치/클릭에서 시작, ♪ 버튼으로 토글, 끈 사람은 기억(localStorage)
+(() => {
+  const a = document.getElementById('bgm'), btn = document.getElementById('bgm-btn');
+  if (!a || !btn) return;
+  a.volume = .55;
+  const get = () => { try { return localStorage.getItem('bgm-off'); } catch (e) { return null; } };
+  const set = v => { try { v ? localStorage.setItem('bgm-off', '1') : localStorage.removeItem('bgm-off'); } catch (e) {} };
+  const ui = on => { btn.classList.toggle('on', on); btn.setAttribute('aria-pressed', on); btn.setAttribute('aria-label', on ? '배경음악 끄기' : '배경음악 켜기'); };
+  let armed = false;
+  const tryPlay = () => a.play().then(() => ui(true)).catch(() => {});
+  const disarm = () => { armed = false; ['pointerdown', 'touchend', 'keydown'].forEach(t => document.removeEventListener(t, onFirst, true)); };
+  const onFirst = e => { if (e.target.closest && e.target.closest('#bgm-btn')) return; disarm(); tryPlay(); };
+  const arm = () => { if (armed) return; armed = true; ['pointerdown', 'touchend', 'keydown'].forEach(t => document.addEventListener(t, onFirst, true)); };
+  btn.addEventListener('click', e => {
+    e.stopPropagation();
+    if (a.paused) { set(false); disarm(); tryPlay(); } else { a.pause(); ui(false); set(true); }
+  });
+  if (!get()) { tryPlay(); arm(); }        // 자동재생 시도 → 막히면 첫 터치를 기다림
+  a.addEventListener('pause', () => ui(false));
+  a.addEventListener('play', () => ui(true));
+  document.addEventListener('visibilitychange', () => { if (document.hidden && !a.paused) a.pause(); else if (!document.hidden && !get() && a.paused && !armed) tryPlay(); });
+})();
+
+// 하객 업로드 버튼: 예식 당일 0시부터 (또는 #upload 로 미리보기)
+(() => {
+  const el = document.getElementById('share'); if (!el) return;
+  const day = new Date('2027-02-27T00:00:00+09:00').getTime();
+  if (Date.now() >= day || location.hash === '#upload') el.dataset.open = '1';
+})();
+
+// copy account numbers
+document.querySelectorAll('.copy').forEach(btn => btn.addEventListener('click', async () => {
+  try { await navigator.clipboard.writeText(btn.dataset.num); } catch (e) {}
+  const prev = btn.textContent; btn.textContent = 'COPIED';
+  setTimeout(() => btn.textContent = prev, 1200);
+}));
+</script>
 </body>
 </html>
