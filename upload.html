@@ -29,7 +29,7 @@ h1{font-family:var(--disp); font-size:34px; font-weight:400; line-height:1.1; te
 h1 i{font-style:italic; color:var(--red); font-size:.6em; display:inline-block; margin:0 6px}
 .kr{font-size:13px; letter-spacing:.28em; text-indent:.28em; color:var(--ink-soft); text-align:center; margin-top:8px}
 .lead{margin:34px 0 26px; text-align:center}
-.lead .hand{font-family:var(--hand); font-size:40px; color:var(--red); line-height:1; margin-bottom:12px}
+.lead .hand{font-family:var(--hand); font-size:40px; color:var(--red); line-height:1; margin-bottom:26px}
 .lead p{font-size:14.5px; line-height:2; text-wrap:balance}
 .lead p small{display:block; font-family:var(--sans); font-weight:300; font-size:12.5px; color:var(--ink-soft); margin-top:8px}
 
@@ -40,13 +40,13 @@ input[type=text]{width:100%; background:var(--card); border:1.5px solid var(--li
 input[type=text]:focus{border-color:var(--ink)}
 
 .drop{
-  border:1.5px dashed var(--ink); border-radius:12px; background:var(--card); padding:30px 18px; text-align:center; cursor:pointer;
+  display:block; border:1.5px dashed var(--ink); border-radius:12px; background:var(--card); padding:30px 18px; text-align:center; cursor:pointer;
   transition:background .15s;
 }
 .drop:active,.drop.over{background:var(--paper-deep)}
-.drop .ic{font-family:var(--disp); font-size:34px; line-height:1; color:var(--red)}
-.drop b{display:block; font-family:var(--sans); font-weight:500; font-size:15px; margin-top:10px}
-.drop small{display:block; font-family:var(--sans); font-weight:300; font-size:12px; color:var(--ink-soft); margin-top:4px}
+.drop .ic{display:block; font-family:var(--disp); font-size:34px; line-height:1; color:var(--red)}
+.drop b{display:block; font-family:var(--sans); font-weight:500; font-size:14.5px; margin-top:10px}
+.drop small{display:block; font-family:var(--sans); font-weight:300; font-size:11.5px; color:var(--ink-soft); margin-top:4px}
 .drop input{display:none}
 
 .list{margin-top:16px; display:grid; gap:8px}
@@ -68,12 +68,15 @@ input[type=text]:focus{border-color:var(--ink)}
 .note{margin-top:14px; font-family:var(--sans); font-weight:300; font-size:12px; color:var(--ink-soft); text-align:center; line-height:1.8}
 .msg{margin-top:12px; font-family:var(--sans); font-size:13px; color:var(--red); text-align:center; min-height:20px}
 
-.thanks{display:none; text-align:center; padding:40px 0 10px}
-.thanks .hand{font-family:var(--hand); font-size:56px; color:var(--red); line-height:1; margin-bottom:16px}
+.thanks{display:none; text-align:center; padding:26px 0 10px}
 .thanks p{font-size:14.5px; line-height:2}
 .thanks button{margin-top:22px; padding:12px 22px; border:1.5px solid var(--ink); background:none; border-radius:999px; font-family:var(--sans); font-size:13px; cursor:pointer; color:var(--ink)}
 .sheet.finished form{display:none} .sheet.finished .thanks{display:block}
 
+.kakao{display:none; margin:0 0 16px; padding:14px 16px; border:1.5px solid var(--red); border-radius:10px; background:#FCF3F1; font-family:var(--sans); font-size:13px; line-height:1.7; text-align:center}
+.kakao b{font-weight:500}
+.kakao a{display:inline-block; margin-top:8px; padding:10px 18px; background:var(--red); color:#FBF8F1; text-decoration:none; border-radius:999px; font-weight:500; font-size:13px}
+body.in-kakao .kakao{display:block}
 footer{margin-top:60px; text-align:center; font-family:var(--cond); font-size:10.5px; letter-spacing:.3em; color:var(--ink-soft)}
 </style>
 </head>
@@ -85,9 +88,13 @@ footer{margin-top:60px; text-align:center; font-family:var(--cond); font-size:10
 
   <div class="lead">
     <p class="hand">Thank you</p>
-    <p>오늘 담아주신 사진과 영상을<br>저희에게 나눠주세요.<small>원본 그대로 저희 보관함에 전달됩니다 · 로그인 필요 없음</small></p>
+    <p>오늘 담아주신 사진과 영상을<br>저희에게 나눠주세요.</p>
   </div>
 
+  <div class="kakao">
+    카카오톡 안에서는 갤러리 선택이 안 될 수 있어요.<br><b>기본 브라우저로 열면</b> 갤러리에서 바로 고를 수 있습니다.
+    <br><a id="ext" href="#">브라우저로 열기</a>
+  </div>
   <form id="form" novalidate>
     <div class="f">
       <label class="l" for="guest">보내는 분 <em>선택 · 파일 이름 앞에 붙습니다</em></label>
@@ -98,7 +105,7 @@ footer{margin-top:60px; text-align:center; font-family:var(--cond); font-size:10
         <span class="ic">+</span>
         <b>사진 · 영상 선택</b>
         <small>여러 개를 한 번에 고를 수 있어요</small>
-        <input type="file" id="files" multiple accept="image/*,video/*">
+        <input type="file" class="files" multiple accept="image/*,video/*">
       </label>
     </div>
     <div class="list" id="list"></div>
@@ -109,12 +116,11 @@ footer{margin-top:60px; text-align:center; font-family:var(--cond); font-size:10
   </form>
 
   <div class="thanks" id="thanks">
-    <p class="hand">Thank you</p>
     <p>소중한 장면들이 잘 전달되었습니다.<br>함께해 주셔서 감사합니다.</p>
     <button type="button" id="more">더 보내기</button>
   </div>
 
-  <footer>2027 . 02 . 27 · THE VER:G</footer>
+  <footer>2027 . 02 . 27 · THE VERDE G</footer>
 </div>
 
 <script>
@@ -122,13 +128,20 @@ footer{margin-top:60px; text-align:center; font-family:var(--cond); font-size:10
 const CONFIG = {
   SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbycAU2X3RP1imRu1audZI_Cn2r6yidfqGstQdEOmkGEr_f-HWyYWP5rfCPPG4PkRgFOXA/exec',
   KEY: 'hy-sj-0227',
-  CHUNK: 8 * 1024 * 1024                        // 8MB (256KB 의 배수여야 함)
+  CHUNK: 32 * 1024 * 1024,                      // 직접 전송 청크 32MB (256KB 의 배수)
+  PROXY_CHUNK: 8 * 1024 * 1024,                 // Apps Script 경유 시 8MB
+  PARALLEL: 3                                   // 동시에 올리는 파일 수
 };
 // QR 링크에 ?k=키 를 붙이면 그 값을 우선 사용 (코드에 키를 안 남기고 싶을 때)
 const KEY = new URLSearchParams(location.search).get('k') || CONFIG.KEY;
 
 const $ = id => document.getElementById(id);
-const list = $('list'), sum = $('sum'), go = $('go'), msg = $('msg'), input = $('files'), drop = $('drop');
+// 카카오톡 인앱 브라우저: 파일 선택창에 갤러리가 없음 → 외부 브라우저로 여는 안내
+if (/KAKAOTALK/i.test(navigator.userAgent)) {
+  document.body.classList.add('in-kakao');
+  $('ext').href = 'kakaotalk://web/openExternal?url=' + encodeURIComponent(location.href);
+}
+const list = $('list'), sum = $('sum'), go = $('go'), msg = $('msg'), inputs = document.querySelectorAll('.files'), drop = $('drop');
 let queue = [];   // {file, el, bar, st, status}
 
 const fmt = b => b >= 1e9 ? (b / 1e9).toFixed(2) + ' GB' : b >= 1e6 ? (b / 1e6).toFixed(1) + ' MB' : Math.max(1, Math.round(b / 1e3)) + ' KB';
@@ -161,7 +174,7 @@ function refresh() {
   sum.textContent = pending.length ? `${pending.length} FILES · ${fmt(total)}` : '';
   go.disabled = !pending.length; msg.textContent = '';
 }
-input.addEventListener('change', () => { addFiles(input.files); input.value = ''; });
+inputs.forEach(input => input.addEventListener('change', () => { addFiles(input.files); input.value = ''; }));
 ['dragenter', 'dragover'].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.add('over'); }));
 ['dragleave', 'drop'].forEach(t => drop.addEventListener(t, e => { e.preventDefault(); drop.classList.remove('over'); }));
 drop.addEventListener('drop', e => addFiles(e.dataTransfer.files));
@@ -175,29 +188,44 @@ async function api(body) {
 }
 const toB64 = blob => new Promise((res, rej) => { const fr = new FileReader(); fr.onload = () => res(fr.result.split(',')[1]); fr.onerror = rej; fr.readAsDataURL(blob); });
 
-// ── 한 파일 업로드: 세션 개설 → 청크 전송 (직접 PUT, 실패 시 Apps Script 경유) ──
+// ── 업로드: 세션을 한 번에 개설 → 파일 3개씩 병렬 → 청크 전송 (직접 PUT, 실패 시 Apps Script 경유) ──
 let mode = 'direct';
-async function uploadOne(q, guest) {
+function putDirect(url, blob, start, end, total, onProg) {   // XHR: 진행률 이벤트를 받기 위해
+  return new Promise((res, rej) => {
+    const x = new XMLHttpRequest(); x.open('PUT', url);
+    x.setRequestHeader('Content-Range', `bytes ${start}-${end}/${total}`);
+    x.upload.onprogress = e => { if (e.lengthComputable) onProg(start + e.loaded); };
+    x.onload = () => (x.status === 308 || (x.status >= 200 && x.status < 300)) ? res() : rej(new Error('status ' + x.status));
+    x.onerror = () => rej(new Error('network')); x.send(blob);
+  });
+}
+async function uploadOne(q, url) {
   const f = q.file;
-  const init = await api({ action: 'init', key: KEY, name: f.name, mime: f.type, size: f.size, guest, origin: location.origin });
-  const url = init.uploadUrl, CH = CONFIG.CHUNK;
-  for (let start = 0; start < f.size; start += CH) {
+  const prog = sent => { const p = Math.min(100, Math.round(sent / f.size * 100)); q.bar.style.width = p + '%'; q.st.textContent = p + '%'; };
+  for (let start = 0; start < f.size;) {
+    const CH = mode === 'direct' ? CONFIG.CHUNK : CONFIG.PROXY_CHUNK;
     const end = Math.min(start + CH, f.size) - 1, blob = f.slice(start, end + 1);
     let ok = false;
     if (mode === 'direct') {
-      try {
-        const r = await fetch(url, { method: 'PUT', headers: { 'Content-Range': `bytes ${start}-${end}/${f.size}` }, body: blob });
-        ok = r.status === 308 || r.ok;
-        if (!ok) throw new Error('status ' + r.status);
-      } catch (e) { mode = 'proxy'; }          // CORS 등으로 직접 전송이 안 되면 이후는 경유 모드
+      try { await putDirect(url, blob, start, end, f.size, prog); ok = true; }
+      catch (e) { mode = 'proxy'; continue; }          // 청크 크기를 바꿔 같은 위치부터 경유 모드로 재시도
     }
     if (!ok) {
       const r = await api({ action: 'chunk', key: KEY, uploadUrl: url, start, end, total: f.size, data: await toB64(blob) });
       if (!(r.code === 308 || r.done)) throw new Error('chunk ' + r.code);
     }
-    q.bar.style.width = Math.round((end + 1) / f.size * 100) + '%';
-    q.st.textContent = Math.round((end + 1) / f.size * 100) + '%';
+    prog(end + 1); start = end + 1;
   }
+}
+async function openSessions(items, guest) {   // 여러 파일의 업로드 URL 을 한 번의 호출로
+  try {
+    const r = await api({ action: 'init-batch', key: KEY, guest, origin: location.origin,
+                          files: items.map(q => ({ name: q.file.name, mime: q.file.type, size: q.file.size })) });
+    if (r.items && r.items.length === items.length) return r.items.map(i => i.uploadUrl || null);
+  } catch (e) { /* 구버전 서버면 아래에서 하나씩 */ }
+  const out = [];
+  for (const q of items) { try { out.push((await api({ action: 'init', key: KEY, name: q.file.name, mime: q.file.type, size: q.file.size, guest, origin: location.origin })).uploadUrl); } catch (e) { out.push(null); } }
+  return out;
 }
 
 $('form').addEventListener('submit', async e => {
@@ -206,12 +234,18 @@ $('form').addEventListener('submit', async e => {
   const guest = $('guest').value.trim();
   go.disabled = true; go.textContent = '보내는 중…'; msg.textContent = '';
   let fail = 0;
-  for (const q of queue) {
-    if (q.status === 'done') continue;
-    q.status = 'up'; q.el.classList.remove('err'); q.st.textContent = '0%';
-    try { await uploadOne(q, guest); q.status = 'done'; q.el.classList.add('done'); q.st.textContent = '완료'; }
-    catch (err) { q.status = 'err'; q.el.classList.add('err'); q.st.textContent = '실패'; fail++; console.error(err); }
+  const items = queue.filter(q => q.status !== 'done');
+  items.forEach(q => { q.status = 'up'; q.el.classList.remove('err'); q.st.textContent = '준비'; });
+  const urls = await openSessions(items, guest);
+  let i = 0;
+  async function worker() {
+    while (i < items.length) {
+      const k = i++, q = items[k], url = urls[k];
+      try { if (!url) throw new Error('no session'); await uploadOne(q, url); q.status = 'done'; q.el.classList.add('done'); q.st.textContent = '완료'; }
+      catch (err) { q.status = 'err'; q.el.classList.add('err'); q.st.textContent = '실패'; fail++; console.error(err); }
+    }
   }
+  await Promise.all(Array.from({ length: Math.min(CONFIG.PARALLEL, items.length) }, worker));
   go.textContent = '보내기';
   if (fail) { msg.textContent = `${fail}개가 전송되지 않았습니다. 다시 '보내기'를 눌러 주세요.`; go.disabled = false; }
   else { $('sheet').classList.add('finished'); window.scrollTo(0, 0); }
