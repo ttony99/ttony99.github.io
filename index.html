@@ -673,6 +673,8 @@ document.querySelectorAll('.screen .hand').forEach(el => {
   }, {passive:true});
 })();
 
+window.startBGM = window.startBGM || function () {};   // BGM 블록에서 실제 함수로 교체됨
+
 // ── RSVP ──
 // 응답은 Apps Script 웹앱(업로드와 같은 것)을 통해 구글 시트에 한 줄씩 저장됨
 const RSVP_ENDPOINT = 'https://script.google.com/macros/s/AKfycbycAU2X3RP1imRu1audZI_Cn2r6yidfqGstQdEOmkGEr_f-HWyYWP5rfCPPG4PkRgFOXA/exec';
@@ -690,9 +692,10 @@ async function sendRSVP(data) {
   let count = 1;
   const get = k => { try { return localStorage.getItem(k) || sessionStorage.getItem(k); } catch (e) { return null; } };
   function open() { box.classList.add('open'); document.body.classList.add('rsvp-lock'); }
-  function close() { box.classList.remove('open'); document.body.classList.remove('rsvp-lock'); try { sessionStorage.setItem('rsvp-later', '1'); } catch (e) {} }
+  function close() { box.classList.remove('open'); document.body.classList.remove('rsvp-lock'); try { sessionStorage.setItem('rsvp-later', '1'); } catch (e) {} if (window.startBGM) window.startBGM(); }
   document.querySelectorAll('[data-rsvp-open]').forEach(b => b.addEventListener('click', open));
   document.querySelectorAll('[data-rsvp-close]').forEach(b => b.addEventListener('click', close));
+  form.addEventListener('pointerdown', () => { if (window.startBGM) window.startBGM(); }, { once: true });
   box.addEventListener('click', e => { if (e.target === box) close(); });
   form.querySelectorAll('.cnt button').forEach(b => b.addEventListener('click', () => {
     count = Math.min(10, Math.max(1, count + Number(b.dataset.d))); countEl.textContent = count;
@@ -733,6 +736,7 @@ async function sendRSVP(data) {
   const EVT = ['pointerdown', 'touchstart', 'touchend', 'click', 'keydown'];
   let armed = false;
   const tryPlay = () => a.play().then(() => { ui(true); disarm(); }).catch(() => {});
+  window.startBGM = () => { if (!get() && a.paused) tryPlay(); };   // 팝업 닫기 등 '확실한 터치' 시점에 호출
   const disarm = () => { armed = false; EVT.forEach(t => document.removeEventListener(t, onFirst, true)); };
   // 재생될 때까지 계속 기다린다: iOS 는 스크롤만으로는 소리를 허용하지 않아 첫 '터치'가 올 때까지 시도
   const onFirst = e => { if (e.target.closest && e.target.closest('#bgm-btn')) return; tryPlay(); };
