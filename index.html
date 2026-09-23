@@ -730,14 +730,16 @@ async function sendRSVP(data) {
   const get = () => { try { return localStorage.getItem('bgm-off'); } catch (e) { return null; } };
   const set = v => { try { v ? localStorage.setItem('bgm-off', '1') : localStorage.removeItem('bgm-off'); } catch (e) {} };
   const ui = on => { btn.classList.toggle('on', on); btn.setAttribute('aria-pressed', on); btn.setAttribute('aria-label', on ? '배경음악 끄기' : '배경음악 켜기'); };
+  const EVT = ['pointerdown', 'touchstart', 'touchend', 'click', 'keydown'];
   let armed = false;
-  const tryPlay = () => a.play().then(() => ui(true)).catch(() => {});
-  const disarm = () => { armed = false; ['pointerdown', 'touchend', 'keydown'].forEach(t => document.removeEventListener(t, onFirst, true)); };
-  const onFirst = e => { if (e.target.closest && e.target.closest('#bgm-btn')) return; disarm(); tryPlay(); };
-  const arm = () => { if (armed) return; armed = true; ['pointerdown', 'touchend', 'keydown'].forEach(t => document.addEventListener(t, onFirst, true)); };
+  const tryPlay = () => a.play().then(() => { ui(true); disarm(); }).catch(() => {});
+  const disarm = () => { armed = false; EVT.forEach(t => document.removeEventListener(t, onFirst, true)); };
+  // 재생될 때까지 계속 기다린다: iOS 는 스크롤만으로는 소리를 허용하지 않아 첫 '터치'가 올 때까지 시도
+  const onFirst = e => { if (e.target.closest && e.target.closest('#bgm-btn')) return; tryPlay(); };
+  const arm = () => { if (armed) return; armed = true; EVT.forEach(t => document.addEventListener(t, onFirst, true)); };
   btn.addEventListener('click', e => {
     e.stopPropagation();
-    if (a.paused) { set(false); disarm(); tryPlay(); } else { a.pause(); ui(false); set(true); }
+    if (a.paused) { set(false); tryPlay(); } else { a.pause(); ui(false); set(true); disarm(); }
   });
   if (!get()) { tryPlay(); arm(); }        // 자동재생 시도 → 막히면 첫 터치를 기다림
   a.addEventListener('pause', () => ui(false));
