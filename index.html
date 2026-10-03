@@ -6,7 +6,9 @@
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:title" content="한용 · 세정 결혼합니다">
 <meta property="og:description" content="2027년 2월 27일 토요일 오후 12시 30분 · 더베르G">
-<meta property="og:image" content="photos/og.jpg">
+<meta property="og:image" content="https://ttony99.github.io/photos/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="icon" href="favicon-32.png" type="image/png" sizes="32x32">
@@ -14,7 +16,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://api.fontshare.com/v2/css?f[]=bespoke-serif@400,500,401,501&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Ms+Madi&family=Oswald:wght@300;400;500&family=Noto+Serif+KR:wght@400;600&family=Noto+Sans+KR:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Ms+Madi&family=Oswald:wght@300;400;500&family=Noto+Serif+KR:wght@400;600&family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 :root{
   --paper:#F6F1E6; --paper-deep:#ECE5D4; --card:#FBF8F1; --ink:#2B2622; --ink-soft:#6F675E;
@@ -207,8 +209,8 @@ body.lb-lock{overflow:hidden}
 
 /* ── location ── */
 .loc{background:var(--paper-deep)}
-.map{aspect-ratio:2/3; overflow:hidden; border-radius:6px; border:1.5px solid var(--ink); margin-bottom:26px; background:#fff}
-.map img{width:100%; height:100%; object-fit:cover; display:block}
+.map{margin:0 -16px 26px}
+.map svg{width:100%; height:auto; display:block}
 .loc dl{display:grid; grid-template-columns:70px 1fr; gap:12px 14px; text-align:left; font-size:14px; font-family:var(--sans); font-weight:300}
 .loc dt{color:var(--red); font-family:var(--cond); font-size:11px; letter-spacing:.24em; padding-top:4px; text-transform:uppercase}
 .loc dd{color:var(--ink-soft); line-height:1.75}
@@ -239,15 +241,21 @@ details.acct[open] summary::after{transform:rotate(45deg)}
 }
 .rsvp{
   position:fixed; inset:0; z-index:110; background:rgba(43,38,34,.55); display:flex; align-items:flex-end; justify-content:center;
+  padding-top:max(32px, calc(env(safe-area-inset-top) + 20px));
   opacity:0; pointer-events:none; transition:opacity .3s ease;
 }
 .rsvp.open{opacity:1; pointer-events:auto}
 .rsvp .card{
-  width:100%; max-width:430px; max-height:92dvh; overflow-y:auto; background:var(--paper); color:var(--ink);
-  border-radius:18px 18px 0 0; padding:22px 24px max(28px, env(safe-area-inset-bottom));
+  width:100%; max-width:430px; max-height:100%; display:flex; flex-direction:column; overflow:hidden; background:var(--paper); color:var(--ink);
+  border-radius:18px 18px 0 0; padding-top:16px;
   transform:translateY(40px); transition:transform .35s cubic-bezier(.2,.8,.2,1); box-shadow:0 -20px 60px rgba(0,0,0,.25);
 }
 .rsvp.open .card{transform:none}
+/* 스크롤은 안쪽(.sc)에서만: 위쪽 여백은 고정, 내용이 카드 모서리까지 올라가지 않도록 */
+.rsvp .sc{
+  overflow-y:auto; overscroll-behavior:contain; padding:12px 24px max(28px, env(safe-area-inset-bottom)); scroll-padding:24px 0;
+  -webkit-mask-image:linear-gradient(transparent, #000 12px); mask-image:linear-gradient(transparent, #000 12px);
+}
 .rsvp .hd{text-align:center; margin-bottom:18px}
 .rsvp .hd h3{font-family:var(--kr); font-size:18px; font-weight:600; letter-spacing:.02em}
 .rsvp .hd p{font-size:12.5px; color:var(--ink-soft); margin-top:6px; font-family:var(--sans); font-weight:300}
@@ -479,7 +487,12 @@ footer .date{font-family:var(--cond); font-size:11px; letter-spacing:.3em; color
   <section class="loc reveal">
     <p class="slug">Location</p>
     <h2>오시는 길</h2>
-    <div class="map"><img src="assets/yakdo-map.png" alt="더베르G 약도"></div>
+    <!-- 약도: 영등포구청역 4번 출구 → 국회대로 → 더베르G (티켓 프레임 SVG) -->
+    <div class="map"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 835" role="img" aria-label="더베르G 약도: 2·5호선 영등포구청역 4번 출구에서 국회대로를 따라 동쪽으로"><defs></defs><mask id="map-fm"><rect x="16" y="16" width="968" height="803" rx="20" fill="#fff"/><circle cx="16" cy="703.5999999999999" r="18"/><circle cx="984" cy="703.5999999999999" r="18"/></mask>
+<clipPath id="map-cp"><rect x="18" y="84" width="964" height="601.5999999999999"/></clipPath>
+<g mask="url(#map-fm)"><rect width="1000" height="835" fill="#F6F1E6"/><g clip-path="url(#map-cp)"><g transform="translate(30.0 84) scale(0.94)"><g transform="translate(0 -120)"><rect y="120" width="1000" height="640" fill="#F6F1E6"/><path d="M180 330 L360 345 L360 660 L180 660Z M395 350 L735 382 L728 660 L395 660Z" fill="#ECE5D4" opacity="0.55"/><g ><line x1="-20" y1="232" x2="1020" y2="331" stroke="#2B2622" stroke-width="96" stroke-linecap="butt" /><line x1="154" y1="110" x2="154" y2="820" stroke="#2B2622" stroke-width="68" stroke-linecap="butt" /><line x1="870" y1="110" x2="752" y2="780" stroke="#2B2622" stroke-width="66" stroke-linecap="butt" /><line x1="-20" y1="677" x2="800" y2="677" stroke="#2B2622" stroke-width="40" stroke-linecap="butt" /><line x1="377" y1="302" x2="377" y2="690" stroke="#2B2622" stroke-width="36" stroke-linecap="butt" /><line x1="-20" y1="232" x2="1020" y2="331" stroke="#FBF8F1" stroke-width="92" stroke-linecap="butt" /><line x1="154" y1="110" x2="154" y2="820" stroke="#FBF8F1" stroke-width="64" stroke-linecap="butt" /><line x1="870" y1="110" x2="752" y2="780" stroke="#FBF8F1" stroke-width="62" stroke-linecap="butt" /><line x1="-20" y1="677" x2="800" y2="677" stroke="#FBF8F1" stroke-width="36" stroke-linecap="butt" /><line x1="377" y1="302" x2="377" y2="690" stroke="#FBF8F1" stroke-width="32" stroke-linecap="butt" /><g transform="translate(390 266.2692307692308) rotate(5.437732168065414)"></g><g transform="translate(713 297.01634615384614) rotate(5.437732168065414)"></g><g transform="translate(856 310.62884615384615) rotate(5.437732168065414)"></g><g transform="translate(204 248.56346153846152) rotate(5.437732168065414)"></g></g><line x1="154" y1="110" x2="154" y2="820" stroke="#8FA98A" stroke-width="7" stroke-linecap="butt" opacity=".85"/><g transform="translate(250 600) scale(1.5)"><circle r="15" fill="#2B2622"/><rect x="-7.5" y="-8.5" width="15" height="14" rx="3" fill="#F6F1E6"/><rect x="-5.5" y="-5.5" width="11" height="4.5" fill="#2B2622"/><circle cx="-3.6" cy="2.6" r="1.5" fill="#2B2622"/><circle cx="3.6" cy="2.6" r="1.5" fill="#2B2622"/></g><text x="250" y="646" text-anchor="middle" font-family="Oswald" font-size="16" font-weight="400" fill="#6F675E" stroke="#F6F1E6" stroke-width="6" stroke-linejoin="round" paint-order="stroke" letter-spacing="2">SHUTTLE</text><path d="M196 402 L196 312 L690 360 L700 392" fill="none" stroke="#C2463C" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="0.1 14"/><g transform="translate(318 166)"><rect x="-10" y="-13" width="20" height="25" rx="1.5" fill="#6F675E"/><rect x="-6" y="-9" width="4" height="4" fill="#F6F1E6"/><rect x="-6" y="-2" width="4" height="4" fill="#F6F1E6"/><rect x="-6" y="5" width="4" height="4" fill="#F6F1E6"/><rect x="1" y="-9" width="4" height="4" fill="#F6F1E6"/><rect x="1" y="-2" width="4" height="4" fill="#F6F1E6"/><rect x="1" y="5" width="4" height="4" fill="#F6F1E6"/><rect x="-3" y="7" width="6" height="5" fill="#F6F1E6"/></g><text x="318" y="208" text-anchor="middle" font-family="Noto Sans KR" font-size="23" font-weight="700" fill="#2B2622" stroke="#F6F1E6" stroke-width="6" stroke-linejoin="round" paint-order="stroke" >당산삼성2차아파트</text><g transform="translate(515 374)"><path d="M-2 -12 L9 -14 L9 5" fill="none" stroke="#6F675E" stroke-width="3" stroke-linejoin="round"/><path d="M-2 -12 L-2 8" stroke="#6F675E" stroke-width="3"/><ellipse cx="-6" cy="8" rx="5.5" ry="4.2" fill="#6F675E"/><ellipse cx="5" cy="5" rx="5.5" ry="4.2" fill="#6F675E"/></g><text x="515" y="416" text-anchor="middle" font-family="Noto Sans KR" font-size="23" font-weight="700" fill="#2B2622" stroke="#F6F1E6" stroke-width="6" stroke-linejoin="round" paint-order="stroke" >영등포아트홀</text><circle cx="236" cy="480" r="22" fill="#3FA650" stroke="#F6F1E6" stroke-width="3"/><text x="236" y="489" text-anchor="middle" font-family="Oswald" font-size="25" font-weight="500" fill="#fff"  >2</text><circle cx="278" cy="480" r="22" fill="#7B4FB3" stroke="#F6F1E6" stroke-width="3"/><text x="278" y="489" text-anchor="middle" font-family="Oswald" font-size="25" font-weight="500" fill="#fff"  >5</text><text x="310" y="492" text-anchor="start" font-family="Noto Sans KR" font-size="34" font-weight="700" fill="#2B2622" stroke="#F6F1E6" stroke-width="6" stroke-linejoin="round" paint-order="stroke" >영등포구청역</text><circle cx="112" cy="402" r="15" fill="#E9B949" stroke="#F6F1E6" stroke-width="3"/><text x="112" y="409" text-anchor="middle" font-family="Oswald" font-size="20" font-weight="500" fill="#2B2622"  >3</text><circle cx="196" cy="402" r="19" fill="#C2463C" stroke="#F6F1E6" stroke-width="3"/><text x="196" y="410.5" text-anchor="middle" font-family="Oswald" font-size="25" font-weight="500" fill="#fff"  >4</text><circle cx="196" cy="560" r="15" fill="#E9B949" stroke="#F6F1E6" stroke-width="3"/><text x="196" y="567" text-anchor="middle" font-family="Oswald" font-size="20" font-weight="500" fill="#2B2622"  >5</text><circle cx="112" cy="560" r="15" fill="#E9B949" stroke="#F6F1E6" stroke-width="3"/><text x="112" y="567" text-anchor="middle" font-family="Oswald" font-size="20" font-weight="500" fill="#2B2622"  >2</text><g transform="translate(700 420) scale(1.35)"><path d="M0 0 C-6 -12 -21 -22 -21 -39 A21 21 0 1 1 21 -39 C21 -22 6 -12 0 0Z" fill="#C2463C"/><path transform="translate(0 -39) scale(2.3)" d="M0 3.2C-1.6 1.6-4 0-4-2.2C-4-3.6-3-4.6-1.8-4.6C-1-4.6-.4-4.2 0-3.5C.4-4.2 1-4.6 1.8-4.6C3-4.6 4-3.6 4-2.2C4 0 1.6 1.6 0 3.2Z" fill="#fff"/></g><text x="820" y="302" text-anchor="middle" font-family="Christmas Twinkle,Ms Madi,cursive" font-size="84" font-weight="400" fill="#C2463C"  transform="rotate(-6 820 282)">Here!</text><text x="700" y="466" text-anchor="middle" font-family="Noto Serif KR" font-size="36" font-weight="600" fill="#2B2622" stroke="#F6F1E6" stroke-width="6" stroke-linejoin="round" paint-order="stroke" >더베르G</text></g></g></g>
+<rect x="17.5" y="17.5" width="965" height="800" rx="19" fill="none" stroke="#2B2622" stroke-width="3"/></g>
+<line x1="40" y1="703.5999999999999" x2="960" y2="703.5999999999999" stroke="#2B2622" stroke-width="2.6" stroke-dasharray="9 8"/><text x="46" y="62" text-anchor="start" font-family="Oswald" font-size="20" font-weight="400" fill="#C2463C"  letter-spacing="5">ADMIT TWO · LOCATION</text><text x="954" y="62" text-anchor="end" font-family="Oswald" font-size="20" font-weight="400" fill="#6F675E"  letter-spacing="2">NO.270227</text><line x1="36" y1="84" x2="964" y2="84" stroke="#2B2622" stroke-width="1.6" stroke-linecap="butt" /><text x="52" y="769.5999999999999" text-anchor="start" font-family="Noto Serif KR" font-size="48" font-weight="600" fill="#2B2622"  >더베르G <tspan font-size='28' fill='#6F675E'>2F</tspan></text><text x="52" y="809.5999999999999" text-anchor="start" font-family="Noto Sans KR" font-size="23" font-weight="500" fill="#6F675E"  >서울 영등포구 국회대로 612 · 코레일유통사옥</text><path transform="translate(920 769.5999999999999) scale(4.6)" d="M0 3.2C-1.6 1.6-4 0-4-2.2C-4-3.6-3-4.6-1.8-4.6C-1-4.6-.4-4.2 0-3.5C.4-4.2 1-4.6 1.8-4.6C3-4.6 4-3.6 4-2.2C4 0 1.6 1.6 0 3.2Z" fill="#C2463C"/></svg></div>
     <dl>
       <dt>Address</dt><dd><b>더베르G</b> 코레일유통사옥 2층<br>서울특별시 영등포구 국회대로 612<br>TEL 02-2088-5272</dd>
       <dt>Subway</dt><dd>2호선 · 5호선 영등포구청역 4번 출구 도보 약 7분</dd>
@@ -532,6 +545,7 @@ footer .date{font-family:var(--cond); font-size:11px; letter-spacing:.3em; color
 <!-- RSVP 팝업: 첫 방문 시 자동으로 열림 · 응답 저장은 sendRSVP()에 연결 -->
 <div class="rsvp" id="rsvp" role="dialog" aria-modal="true" aria-labelledby="rsvp-t">
   <div class="card">
+  <div class="sc">
     <div class="hd">
       <h3 id="rsvp-t">참석 여부를 알려주세요</h3>
       <p>식사 준비를 위해 참석 여부를 미리 알려주시면 큰 도움이 됩니다.</p>
@@ -582,6 +596,7 @@ footer .date{font-family:var(--cond); font-size:11px; letter-spacing:.3em; color
       <p>응답이 전달되었습니다.<br>소중한 시간 내어 함께해 주셔서 감사합니다.</p>
       <button type="button" class="later" data-rsvp-close>닫기</button>
     </div>
+  </div>
   </div>
 </div>
 
@@ -694,8 +709,15 @@ async function sendRSVP(data) {
   const countEl = document.getElementById('r-count'), countF = document.getElementById('r-count-f'), mealF = document.getElementById('r-meal-f');
   let count = 1;
   const get = k => { try { return localStorage.getItem(k) || sessionStorage.getItem(k); } catch (e) { return null; } };
-  function open() { box.classList.add('open'); document.body.classList.add('rsvp-lock'); }
-  function close() { box.classList.remove('open'); document.body.classList.remove('rsvp-lock'); try { sessionStorage.setItem('rsvp-later', '1'); } catch (e) {} if (window.startBGM) window.startBGM(); }
+  // 키보드가 올라오면 보이는 영역(visualViewport)에 맞춰 시트 높이를 줄여 위쪽 여백을 유지
+  const vv = window.visualViewport;
+  function fit() {
+    if (!vv || !box.classList.contains('open')) return;
+    box.style.top = vv.offsetTop + 'px'; box.style.height = vv.height + 'px'; box.style.bottom = 'auto';
+  }
+  if (vv) { vv.addEventListener('resize', fit); vv.addEventListener('scroll', fit); }
+  function open() { box.classList.add('open'); document.body.classList.add('rsvp-lock'); fit(); }
+  function close() { box.classList.remove('open'); box.style.top = box.style.height = box.style.bottom = ''; document.body.classList.remove('rsvp-lock'); try { sessionStorage.setItem('rsvp-later', '1'); } catch (e) {} if (window.startBGM) window.startBGM(); }
   document.querySelectorAll('[data-rsvp-open]').forEach(b => b.addEventListener('click', open));
   document.querySelectorAll('[data-rsvp-close]').forEach(b => b.addEventListener('click', close));
   form.addEventListener('pointerdown', () => { if (window.startBGM) window.startBGM(); }, { once: true });
